@@ -42,5 +42,13 @@ Java Quickstart
 * Compile the java source file and create a jar file
 
   ```
-  gradle jar
+  $ gradle jar
+  :compileJava
+  :processResources UP-TO-DATE
+  :classes
+  :jar
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 2.917 secs
   ```
