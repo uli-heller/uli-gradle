@@ -53,6 +53,62 @@ Java Quickstart
   Total time: 2.917 secs
   ```
 
+Gradle Wrapper
+--------------
+
+* Starting point: The java quickstart project
+
+* Add the Wrapper task to the gradle build file 
+
+  ```
+  apply plugin: "java"
+
+  task wrapper(type: Wrapper) {
+    gradleVersion = '1.4'
+  }
+  ```
+
+* Execute the wrapper task
+
+  ```
+  $ gradle wrapper
+  :wrapper
+
+  BUILD SUCCESSFUL
+
+  Total time: 3.62 secs
+  ```
+
+* Add the generated files to your version control system (subversion, git)
+
+  ```
+  $ git add -v gradle*
+  add '02-gradle-wrapper/gradle/wrapper/gradle-wrapper.jar'
+  add '02-gradle-wrapper/gradle/wrapper/gradle-wrapper.properties'
+  add '02-gradle-wrapper/gradlew'
+  add '02-gradle-wrapper/gradlew.bat'
+  ```
+
+* Run the build using gradle wrapper
+
+  ```
+  $ ./gradlew jar
+  Downloading http://services.gradle.org/distributions/gradle-1.4-bin.zip
+  ................................................
+  .....................................................
+  Unzipping .../.gradle/wrapper/dists/gradle-1.4-bin/.../gradle-1.4-bin.zip to .../.gradle/wrapper/dists/gradle-1.4-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.4-bin/.../gradle-1.4/bin/gradle
+  :compileJava
+  :processResources UP-TO-DATE
+  :classes
+  :jar
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 5 mins 19.649 secs
+  ```
+
+
 Groovy Quickstart
 -----------------
 
