@@ -63,6 +63,7 @@ Example: See [02-java-quickstart-gradlew](02-java-quickstart-gradlew).
 Note: You don't have to install gradle first!
 
 * Assume you have a project with
+
     * a script named gradlew
     * a batch file named gradlew.bat
     * a folder named gradle
@@ -72,7 +73,7 @@ Note: You don't have to install gradle first!
 * Compile the java source file and create a jar file
 
   ```
-  $ ./gradle jar
+  $ ./gradlew jar
   Downloading http://services.gradle.org/distributions/gradle-1.4-bin.zip
   ................................................
   .....................................................
