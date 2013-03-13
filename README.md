@@ -30,6 +30,9 @@ Gradle Coldstart
 Java Quickstart
 ---------------
 
+Example: See [01-java-quickstart](01-java-quickstart). Note: You have
+to install gradle first! See "Gradle Coldstart" for details!
+
 * Create a java source file within src/main/java, for example
   src/main/java/org/uli/httpcat/HttpCat.java
 
@@ -53,8 +56,43 @@ Java Quickstart
   Total time: 2.917 secs
   ```
 
+Java Quickstart With Gradle Wrapper
+-----------------------------------
+
+Example: See [02-java-quickstart-gradlew](02-java-quickstart-gradlew).
+Note: You don't have to install gradle first!
+
+* Assume you have a project with
+    * a script named gradlew
+    * a batch file named gradlew.bat
+    * a folder named gradle
+
+* Typically, there will be a build file named "build.gradle"
+
+* Compile the java source file and create a jar file
+
+  ```
+  $ ./gradle jar
+  Downloading http://services.gradle.org/distributions/gradle-1.4-bin.zip
+  ................................................
+  .....................................................
+  Unzipping .../.gradle/wrapper/dists/gradle-1.4-bin/.../gradle-1.4-bin.zip to .../.gradle/wrapper/dists/gradle-1.4-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.4-bin/.../gradle-1.4/bin/gradle
+  :compileJava
+  :processResources UP-TO-DATE
+  :classes
+  :jar
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 2.917 secs
+  ```
+
 Gradle Wrapper
 --------------
+
+Example: See [03-gradle-wrapper](03-gradle-wrapper)
+Within this chapter, we describe how to bootstrap the gradle wrapper.
 
 * Starting point: The java quickstart project
 
