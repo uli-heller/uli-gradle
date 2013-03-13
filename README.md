@@ -52,3 +52,38 @@ Java Quickstart
   
   Total time: 2.917 secs
   ```
+
+Groovy Quickstart
+-----------------
+
+* Create a groovy source file within src/main/groovy, for example
+  src/main/groovy/org/uli/linesep/LineSep.groovy
+
+* Create a gradle build file named build.gradle
+
+  ```
+  apply plugin: "groovy"
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.1.1'
+  }
+  ```
+
+* Compile the groovy source file and create a jar file
+
+  ```
+  $ gradle jar
+  Download http://repo1.maven.org/.../2.1.1/groovy-all-2.1.1.pom
+  Download http://repo1.maven.org/.../2.1.1/groovy-all-2.1.1.jar
+  :compileJava UP-TO-DATE
+  :compileGroovy
+  :processResources UP-TO-DATE
+  :classes
+  :jar
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 3.691 secs
+  ```
