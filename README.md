@@ -147,6 +147,47 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
   ```
 
 
+Multi Project Build
+-------------------
+
+Example: See [04-multi-project](04-multi-project).
+
+* Starting point: You have multiple separate projects
+
+    * 01-java-quickstart
+
+    * 02-java-quickstart-gradlew
+
+    * 03-gradle-wrapper
+
+* Create a new project: 04-multi-project
+
+* Within the new project: Create the file settings.gradle
+
+  ```
+  include '../01-java-quickstart',
+          '../02-java-quickstart-gradlew',
+          '../03-gradle-wrapper'
+  ```
+
+* Now execute the multi build
+
+  ```
+  $ gradle check
+  :../01-java-quickstart:compileJava
+  :../01-java-quickstart:processResources UP-TO-DATE
+  :../01-java-quickstart:classes
+  :../01-java-quickstart:compileTestJava UP-TO-DATE
+  ...
+  :../03-gradle-wrapper:testClasses UP-TO-DATE
+  :../03-gradle-wrapper:test
+  :../03-gradle-wrapper:check
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 3.59 secs
+  ```
+
 Groovy Quickstart
 -----------------
 

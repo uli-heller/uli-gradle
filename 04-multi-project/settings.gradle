@@ -1,1 +1,3 @@
-include '../01-java-quickstart', '../02-java-quickstart-gradlew', '../03-gradle-wrapper'
+include '../01-java-quickstart',
+        '../02-java-quickstart-gradlew',
+        '../03-gradle-wrapper'
