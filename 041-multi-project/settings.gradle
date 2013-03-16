@@ -1,0 +1,3 @@
+include '../010-java-quickstart',
+        '../020-java-quickstart-gradlew',
+        '../030-gradle-wrapper'
