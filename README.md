@@ -88,6 +88,45 @@ Note: You don't have to install gradle first!
   Total time: 2.917 secs
   ```
 
+Avoiding Downloads With Gradle Wrapper
+--------------------------------------
+
+Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew)
+(same as before).
+
+* If you use multiple PCs for development,
+  gradle will be downloaded before starting the first build
+
+  ```
+  otherpc$ ./gradlew jar
+  Downloading http://services.gradle.org/distributions/gradle-1.4-bin.zip
+  ................................................^C
+  otherpc$
+  ```
+
+* You can avoid this by copying the folder "$HOME/.gradle"
+
+  ```
+  thispc$ rsync -ruv $HOME/.gradle uli@otherpc:
+  ```
+
+  Note: Replace "otherpc" by the name of the other pc and "uli" by
+  your username on the other pc!
+
+* Now the build runs fine without a download
+
+  ```
+  otherpc$ ./gradlew jar
+  :compileJava
+  :processResources UP-TO-DATE
+  :classes
+  :jar
+  
+  BUILD SUCCESSFUL
+  
+  Total time: 2.933 secs
+  ```
+
 Gradle Wrapper
 --------------
 
