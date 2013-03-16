@@ -205,6 +205,28 @@ Example: See [05-external-dependencies](05-external-dependencies).
 
 * Try a build: `./gradlew check` -> "BUILD FAILED"
 
+* Determine artifactId, groupId, and version of the external dependency. In
+  our case, this can be found on the [overview page](http://commons.apache.org/proper/commons-lang/index.html) of Apache Commons Lang.
+
+    * artifactId: commons-lang3
+    * groupId: org.apache.commons
+    * version: 3.1
+
+* Add the dependency to [build.gradle](05-external-dependencies/build.gradle)
+
+  ```
+  ...
+  dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+  }
+
+  repositories {
+    mavenCentral()
+  }
+  ```
+
+* Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
+
 Groovy Quickstart
 -----------------
 
