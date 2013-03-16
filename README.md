@@ -188,45 +188,55 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
 Multi Project Build
 -------------------
 
-Example: See [040-multi-project](040-multi-project).
+Example: See [041-multi-project](041-multi-project).
 
 * Starting point: You have multiple separate projects
 
-    * 01-java-quickstart
+    * 010-java-quickstart
 
-    * 02-java-quickstart-gradlew
+    * 020-java-quickstart-gradlew
 
-    * 03-gradle-wrapper
+    * 030-gradle-wrapper
 
-* Create a new project: 04-multi-project
+* Create a new project: 041-multi-project
 
 * Within the new project: Create the file settings.gradle
 
   ```
-  include '../01-java-quickstart',
-          '../02-java-quickstart-gradlew',
-          '../03-gradle-wrapper'
+  include '010-java-quickstart',
+          '020-java-quickstart-gradlew',
+          '030-gradle-wrapper'
   ```
+
+  Note: Don't use '../010-java-quickstart' or similar!
+  With gradle-1.4 and 1.5-rc-1, this will lead to a failure 
+  when executing `gradle jar`!
+
+* Create links to the projects
+
+    * `for i in 010 020 030; do ln -s ../$i*; done`
 
 * Now execute the multi build
 
   ```
-  $ gradle check
-  :../01-java-quickstart:compileJava
-  :../01-java-quickstart:processResources UP-TO-DATE
-  :../01-java-quickstart:classes
-  :../01-java-quickstart:compileTestJava UP-TO-DATE
-  ...
-  :../03-gradle-wrapper:testClasses UP-TO-DATE
-  :../03-gradle-wrapper:test
-  :../03-gradle-wrapper:check
+  $ gradle jar
+  :010-java-quickstart:compileJava
+  :010-java-quickstart:processResources UP-TO-DATE
+  :010-java-quickstart:classes
+  :010-java-quickstart:jar
+  :020-java-quickstart-gradlew:compileJava
+  :020-java-quickstart-gradlew:processResources UP-TO-DATE
+  :020-java-quickstart-gradlew:classes
+  :020-java-quickstart-gradlew:jar
+  :030-gradle-wrapper:compileJava
+  :030-gradle-wrapper:processResources UP-TO-DATE
+  :030-gradle-wrapper:classes
+  :030-gradle-wrapper:jar
   
   BUILD SUCCESSFUL
   
-  Total time: 3.59 secs
+  Total time: 3.841 secs
   ```
-
-* Note: With gradle-1.4 and 1.5-rc-1, executing `gradle jar` fails
 
 External Dependencies
 ---------------------
