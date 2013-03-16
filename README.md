@@ -107,7 +107,7 @@ Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew)
 * You can avoid this by copying the folder "$HOME/.gradle"
 
   ```
-  thispc$ rsync -ruv $HOME/.gradle uli@otherpc:
+  thispc$ rsync -ruv "$HOME/.gradle" uli@otherpc:
   ```
 
   Note: Replace "otherpc" by the name of the other pc and "uli" by
