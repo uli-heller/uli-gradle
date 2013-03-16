@@ -185,7 +185,6 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
   Total time: 5 mins 19.649 secs
   ```
 
-
 Multi Project Build
 -------------------
 
@@ -265,6 +264,39 @@ Example: See [050-external-dependencies](050-external-dependencies).
   ```
 
 * Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
+
+Integration Into Eclipse
+------------------------
+
+Example: See [060-eclipse-integration](060-eclipse-integration).
+
+* Start with a copy of a gradle project, for example create a copy
+  of [050-external-dependencies](050-external-dependencies).
+
+* Modify the file [build.gradle](060-eclipse-integration/build.gradle):
+  Add the eclipse plugin.
+
+  ```
+  ...
+  apply plugin: 'eclipse'
+  ...
+  ```
+
+* Execute './gradlew eclipse'
+
+* Now you can import the project into eclipse
+
+    * File - Import
+
+    * General - Existing Projects into Workspace - Next
+
+    * Select root directory: .../060-eclipse-integration
+
+    * Finish
+
+Note: The eclipse project files to contain absolut paths to your working
+environment, so you will probably never store them in a version control
+system.
 
 Groovy Quickstart
 -----------------
