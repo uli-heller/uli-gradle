@@ -30,7 +30,7 @@ Gradle Coldstart
 Java Quickstart
 ---------------
 
-Example: See [01-java-quickstart](01-java-quickstart). Note: You have
+Example: See [010-java-quickstart](010-java-quickstart). Note: You have
 to install gradle first! See "Gradle Coldstart" for details!
 
 * Create a java source file within src/main/java, for example
@@ -59,7 +59,7 @@ to install gradle first! See "Gradle Coldstart" for details!
 Java Quickstart With Gradle Wrapper
 -----------------------------------
 
-Example: See [02-java-quickstart-gradlew](02-java-quickstart-gradlew).
+Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew).
 Note: You don't have to install gradle first!
 
 * Assume you have a project with
@@ -91,7 +91,7 @@ Note: You don't have to install gradle first!
 Gradle Wrapper
 --------------
 
-Example: See [03-gradle-wrapper](03-gradle-wrapper)
+Example: See [030-gradle-wrapper](030-gradle-wrapper)
 Within this chapter, we describe how to bootstrap the gradle wrapper.
 
 * Starting point: The java quickstart project
@@ -150,7 +150,7 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
 Multi Project Build
 -------------------
 
-Example: See [04-multi-project](04-multi-project).
+Example: See [040-multi-project](040-multi-project).
 
 * Starting point: You have multiple separate projects
 
@@ -193,15 +193,15 @@ Example: See [04-multi-project](04-multi-project).
 External Dependencies
 ---------------------
 
-Example: See [05-external-dependencies](05-external-dependencies).
+Example: See [050-external-dependencies](050-external-dependencies).
 
 * Starting point: A simple project based on gradle wrapper, for example
-  [02-java-quickstart-gradlew](02-java-quickstart-gradlew).
+  [020-java-quickstart-gradlew](020-java-quickstart-gradlew).
 
 * Try a build: `./gradlew check` -> "BUILD SUCCESSFUL"
 
 * Add a java source file using an external dependency like this:
-  [HtmlUnescape.java](05-external-dependencies/src/main/java/org/uli/htmlunescape/HtmlUnescape.java).
+  [HtmlUnescape.java](050-external-dependencies/src/main/java/org/uli/htmlunescape/HtmlUnescape.java).
 
 * Try a build: `./gradlew check` -> "BUILD FAILED"
 
@@ -212,7 +212,7 @@ Example: See [05-external-dependencies](05-external-dependencies).
     * groupId: org.apache.commons
     * version: 3.1
 
-* Add the dependency to [build.gradle](05-external-dependencies/build.gradle)
+* Add the dependency to [build.gradle](050-external-dependencies/build.gradle)
 
   ```
   ...
@@ -229,6 +229,8 @@ Example: See [05-external-dependencies](05-external-dependencies).
 
 Groovy Quickstart
 -----------------
+
+Example: See [200-groovy-quickstart](200-groovy-quickstart). Note: You have
 
 * Create a groovy source file within src/main/groovy, for example
   src/main/groovy/org/uli/linesep/LineSep.groovy
