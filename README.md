@@ -282,7 +282,7 @@ Example: See [060-eclipse-integration](060-eclipse-integration).
   ...
   ```
 
-* Execute './gradlew eclipse'
+* Execute `./gradlew eclipse`
 
 * Now you can import the project into eclipse
 
