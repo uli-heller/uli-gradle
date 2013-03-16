@@ -188,6 +188,23 @@ Example: See [04-multi-project](04-multi-project).
   Total time: 3.59 secs
   ```
 
+* Note: With gradle-1.4 and 1.5-rc-1, executing `gradle jar` fails
+
+External Dependencies
+---------------------
+
+Example: See [05-external-dependencies](05-external-dependencies).
+
+* Starting point: A simple project based on gradle wrapper, for example
+  [02-java-quickstart-gradlew](02-java-quickstart-gradlew).
+
+* Try a build: `./gradlew check` -> "BUILD SUCCESSFUL"
+
+* Add a java source file using an external dependency like this:
+  [HtmlUnescape.java](05-external-dependencies/src/main/java/org/uli/htmlunescape/HtmlUnescape.java).
+
+* Try a build: `./gradlew check` -> "BUILD FAILED"
+
 Groovy Quickstart
 -----------------
 
