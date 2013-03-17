@@ -2,7 +2,7 @@ File libDir = new File("lib");
 
 subprojects.each { subproject -> evaluationDependsOn(subproject.path)}
 
-task lib(type: Copy) {
+task collectJars(type: Copy) {
    subprojects.each { subproject -> 
       subproject.configurations.each { configuration ->
         from configuration
