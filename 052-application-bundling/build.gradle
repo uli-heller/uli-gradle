@@ -1,10 +1,11 @@
 apply plugin: "java"
 apply plugin: "application"
 
-mainClassName = 'org.uli.htmlunescape.HtmlUnescape';
+mainClassName = 'org.uli.htmlunescape.Main';
 
 dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.2'
 }
 
 repositories {
