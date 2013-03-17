@@ -5,7 +5,8 @@ String derbyVersion = '10.9.1.0';
 
 dependencies {
    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: eclipseLinkVersion
-   runtime group: 'org.apache.derby',        name: 'derby',                 version: derbyVersion
+   testCompile group: 'org.apache.derby',        name: 'derby',                 version: derbyVersion
+   testCompile group: 'junit', name: 'junit', version: '4.11'
    //runtime group: 'org.apache.derby',        name: 'derbyclient',                 version: derbyVersion
 
     // compile group: 'org.eclipse.persistence', name: '...', version: eclipseLinkVersion
