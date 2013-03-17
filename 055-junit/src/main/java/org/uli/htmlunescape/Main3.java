@@ -15,11 +15,11 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
 
-public class Main {
+public class Main3 {
     static private final String NAME="http-unescape";
     static private final String ENCODING="UTF-8";
     static public void main(String[] args) {
-        Main main = new Main();
+        Main3 main = new Main3();
         System.exit(main.execute(args));
     }
     
