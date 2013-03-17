@@ -67,7 +67,7 @@ public class Main3 {
                 charsetName = commandLine.getOptionValue("e");
             }
             String content = readFile(fromFile, charsetName);
-            writeFile(toFile, new HtmlUnescape().unescapeHtml(content), charsetName);
+            writeFile(toFile, new HtmlUnescape3().unescapeHtml(content), charsetName);
         } catch (ParseException e) {
             System.err.println(NAME+": Command line error - "+e.getMessage());
             exitCode=1;
