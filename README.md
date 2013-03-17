@@ -9,6 +9,14 @@ Overview
 * [Gradle Coldstart](#gradle-coldstart)
 * [Java Quickstart](#java-quickstart)
 * [Java Quickstart with Gradle Wrapper](#java-quickstart-with-gradle-wrapper)
+* [Avoiding Downloads With Gradle Wrapper](#avoiding-downloads-with-gradle-wrapper) (optional)
+* [Gradle Wrapper](#gradle-wrapper) (optional)
+* [Multi Project Build](#multi-project-build)
+* [External Dependencies](#external-dependencies)
+* [Bundle An Application](#bundle-an-application)
+* [Integration Into Eclipse](#integration-into-eclipse)
+* [Developing a Web Application](#developing-a-web-application)
+* [Groovy Quickstart](#groovy-quickstart)
 
 Gradle Coldstart
 ----------------
@@ -348,8 +356,8 @@ Note: The eclipse project files to contain absolut paths to your working
 environment, so you will probably never store them in a version control
 system.
 
-Devloping a Web Application
----------------------------
+Developing a Web Application
+----------------------------
 
 Example: See [070-webapp](070-webapp).
 
