@@ -1,0 +1,8 @@
+File f = new File('..');
+f.eachFile {
+  if (it.isDirectory()) {
+    if (it.getName() =~ ~/[0-9]{3}-/) {
+      include "../${it.getName()}";
+    }
+  }
+}

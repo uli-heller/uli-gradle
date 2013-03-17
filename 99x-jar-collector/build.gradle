@@ -1,0 +1,16 @@
+File libDir = new File("lib");
+
+subprojects.each { subproject -> evaluationDependsOn(subproject.path)}
+
+task lib(type: Copy) {
+   subprojects.each { subproject -> 
+      subproject.configurations.each { configuration ->
+        from configuration
+        into libDir
+      }
+   }
+}
+
+task clean {
+  ant.delete(dir: libDir);
+}
