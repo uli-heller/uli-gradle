@@ -2,10 +2,8 @@ package org.uli.htmlunescape;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 import org.apache.commons.cli.CommandLine;
@@ -41,12 +39,19 @@ public class Main {
                     .withDescription("output file to be generated containing no html entities")
                     .create("t");
         @SuppressWarnings("static-access")
+        Option encoding = OptionBuilder.withArgName("encoding")
+                    .hasArg(true)
+                    .isRequired(false)
+                    .withDescription("encoding for input and output")
+                    .create("e");
+        @SuppressWarnings("static-access")
         Option h = OptionBuilder.hasArg(false)
                     .withDescription("print help (this message)")
                     .create("h");
         options.addOption(f);
         options.addOption(t);
         options.addOption(h);
+        options.addOption(encoding);
         CommandLineParser commandLineParser = new PosixParser();
         try {
             CommandLine commandLine = commandLineParser.parse(options, args);
@@ -57,8 +62,12 @@ public class Main {
             }
             File fromFile = new File(commandLine.getOptionValue("f"));
             File toFile = new File(commandLine.getOptionValue("t"));
-            String content = readFile(fromFile, ENCODING);
-            writeFile(toFile, new HtmlUnescape().unescapeHtml(content), ENCODING);
+            String charsetName = ENCODING;
+            if (commandLine.hasOption("e")) {
+                charsetName = commandLine.getOptionValue("e");
+            }
+            String content = readFile(fromFile, charsetName);
+            writeFile(toFile, new HtmlUnescape().unescapeHtml(content), charsetName);
         } catch (ParseException e) {
             System.err.println(NAME+": Command line error - "+e.getMessage());
             exitCode=1;
