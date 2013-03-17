@@ -1,8 +1,10 @@
 *~
 *#
 .gradle
-*/build
 */.classpath
 */.project
 */.settings
 99x-*/lib
+*/derbyDb
+*/derby.log
+build
