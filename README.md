@@ -294,13 +294,16 @@ There is a gradle plugin which helps you doing this.
 * Starting point: A project with external dependencies, for example
   a copy of [050-external-dependencies](050-external-dependencies).
 
-* Modify the [build.gradle](052-application-bundling): Add
-  the application plugin and define the main class
+* Modify the file [build.gradle](052-application-bundling/build.gradle): Add
+  the application plugin and define the main class.
+
+* Create a file [settings.gradle](052-application-bundling/settings.gradle):
+  Define the project name.
 
 * Run the build: `./gradlew installApp`
 
 * Run the application:
-  `./build/install/052-application-bundling/bin/052-application-bundling -f data/test-data.txt -t data/test-data.out`
+  `./build/install/html-unescape/bin/html-unescape -f data/test-data.txt -t data/test-data.out`
 
 * Delete the generated file (after looking at it):
   `rm -f data/test-data.out`
