@@ -8,6 +8,8 @@
 	<classpathentry kind="src" path="060-eclipse-integration/src/main/java"/>
 	<classpathentry kind="src" path="300-jpa/src/main/java"/>
 	<classpathentry kind="src" path="300-jpa/src/test/java"/>
+	<classpathentry kind="src" path="055-junit/src/main/java"/>
+	<classpathentry kind="src" path="055-junit/src/test/java"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/groovy-all-2.1.1.jar"/>
