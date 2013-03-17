@@ -209,7 +209,7 @@ Example: See [041-multi-project](041-multi-project).
   ```
 
   Note: Don't use '../010-java-quickstart' or similar!
-  With gradle-1.4 and 1.5-rc-1, this will lead to a failure 
+  With gradle-1.4 and 1.5-rc-2, this will lead to a failure 
   when executing `gradle jar`!
 
 * Create links to the projects
