@@ -14,6 +14,7 @@ Overview
 * [Multi Project Build](#multi-project-build)
 * [External Dependencies](#external-dependencies)
 * [Bundle An Application](#bundle-an-application)
+* [Adding JUnit Tests](#adding-junit-tests)
 * [Integration Into Eclipse](#integration-into-eclipse)
 * [Developing a Web Application](#developing-a-web-application)
 * [Groovy Quickstart](#groovy-quickstart)
@@ -322,6 +323,23 @@ There is a gradle plugin which helps you doing this.
 
 * Delete the generated file (after looking at it):
   `rm -f data/test-data.out`
+
+Adding JUnit Tests
+------------------
+
+Example: See [055-junit](055-junit).
+
+* Start with a Java project, for example [052-application-bundling](052-application-bundling)
+
+* Add a JUnit test class: [HtmlUnescape3Test.java](055-junit/src/test/java/org/uli/htmlunescape/HtmlUnescape3Test.java). Be sure the class is located within src/test/java instead of src/main/java.
+
+* Modify [build.gradle](055-junit/build.gradle):
+
+    * Add a dependency to "junit"
+
+* Execute the junit tests: `./gradlew check`
+
+* View the test report in your browser: `firefox build/reports/tests/index.html`
 
 Integration Into Eclipse
 ------------------------
