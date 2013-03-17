@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class HttpCat {
+public class HttpCat6 {
     public static void main(String[] args) throws IOException {
         if (args.length != 1) {
             System.err.println("USAGE: httpcat url");
