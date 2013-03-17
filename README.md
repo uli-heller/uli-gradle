@@ -336,9 +336,16 @@ Example: See [070-webapp](070-webapp).
 * Deploy the war file into Tomcat7: 
   `cp build/libs/070-webapp.war /opt/apache-tomcat-7.0.37/webapps`
 
-* Start Tomcat7
+  Note: This assumes that your Tomcat7 installation resides in
+  /opt/apache-tomcat-7.0.37.
+
+* Start Tomcat7:
+  `/opt/apache-tomcat-7.0.37/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/070-webapp/](http://localhost:8080/070-webapp/)
+
+  Note: This assumes that your Tomcat7 listens to port 8080, which is the
+  default setting.
 
 Groovy Quickstart
 -----------------
