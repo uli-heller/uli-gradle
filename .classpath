@@ -6,21 +6,11 @@
 	<classpathentry kind="src" path="050-external-dependencies/src/main/java"/>
 	<classpathentry kind="src" path="052-application-bundling/src/main/java"/>
 	<classpathentry kind="src" path="060-eclipse-integration/src/main/java"/>
-	<classpathentry kind="lib" path="020-java-quickstart-gradlew/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="030-gradle-wrapper/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="041-multi-project/020-java-quickstart-gradlew/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="041-multi-project/030-gradle-wrapper/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="050-external-dependencies/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/install/051-external-dependencies/lib/051-external-dependencies.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/install/051-external-dependencies/lib/commons-lang3-3.1.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/install/052-application-bundling/lib/052-application-bundling.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/install/052-application-bundling/lib/commons-cli-1.2.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/install/052-application-bundling/lib/commons-lang3-3.1.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/libs/051-external-dependencies.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/build/libs/052-application-bundling.jar"/>
-	<classpathentry kind="lib" path="052-application-bundling/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="060-eclipse-integration/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="070-webapp/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="src" path="300-jpa/src/main/java"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/groovy-all-2.1.1.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="052-application-bundling/build/classes/main"/>
+	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>
