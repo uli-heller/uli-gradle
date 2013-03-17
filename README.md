@@ -275,6 +275,33 @@ Example: See [050-external-dependencies](050-external-dependencies).
 
 * Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
 
+Bundle An Application
+---------------------
+
+Example: See [052-application-bundling](052-application-bundling).
+
+
+You'd like to build an application consisting of
+
+* your java classes
+
+* the external dependencies
+
+* a start script
+
+There is a gradle plugin which helps you doing this.
+
+* Starting point: A project with external dependencies, for example
+  a copy of [050-external-dependencies](050-external-dependencies).
+
+* Modify the [build.gradle](052-application-bundling): Add
+  the application plugin and define the main class
+
+* Run the build: `./gradlew installApp`
+
+* Run the application:
+  `./build/install/052-application-bundling/bin/052-application-bundling "A&amp;B"`
+
 Integration Into Eclipse
 ------------------------
 
