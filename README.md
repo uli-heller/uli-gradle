@@ -300,7 +300,10 @@ There is a gradle plugin which helps you doing this.
 * Run the build: `./gradlew installApp`
 
 * Run the application:
-  `./build/install/052-application-bundling/bin/052-application-bundling "A&amp;B"`
+  `./build/install/052-application-bundling/bin/052-application-bundling -f data/test-data.txt -t data/test-data.out`
+
+* Delete the generated file (after looking at it):
+  `rm -f data/test-data.out`
 
 Integration Into Eclipse
 ------------------------
