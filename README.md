@@ -443,7 +443,7 @@ Example: See [100-jpa-eclipselink](100-jpa-eclipselink).
 
 * Create a configuration file for your database: [persistence.xml]100-jpa-eclipselink/src/main/resources/persistence.xml)
 
-* Comile and run junit tests: `./gradlew check`
+* Compile and run junit tests: `./gradlew check`
 
 * View the test reports: `firefox build/reports/tests/index.html`
 
