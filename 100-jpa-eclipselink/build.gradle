@@ -20,3 +20,8 @@ repositories {
       url 'http://download.eclipse.org/rt/eclipselink/maven.repo'
     }
 }
+
+clean.doLast {
+  ant.delete(dir: 'derbyDb');
+  ant.delete(file: 'derby.log');
+}

@@ -24,14 +24,17 @@ import org.junit.Test;
  *
  */
 public class PersonTest {
-    private static final String PERSISTENCE_UNIT_NAME = "jpa-test";
+    private static final String PERSISTENCE_UNIT_NAME = "jpa";
     private static EntityManagerFactory entityManagerFactory;
 
     private static Map<Integer, Person> persons = new HashMap<Integer, Person>();
 
     @BeforeClass
     static public void initEm() {
-        entityManagerFactory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        Map<String,String> persistenceProperties = new HashMap<String,String>();
+        persistenceProperties.put("javax.persistence.jdbc.driver", "org.apache.derby.jdbc.EmbeddedDriver");
+        persistenceProperties.put("javax.persistence.jdbc.url","jdbc:derby:memory:derbyDb;create=true"); 
+        entityManagerFactory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME, persistenceProperties);
     }
 
     /**
