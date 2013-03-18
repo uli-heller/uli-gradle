@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="010-java-quickstart/src/main/java"/>
+	<classpathentry kind="src" path="100-jpa-eclipselink/src/test/java"/>
+	<classpathentry kind="src" path="100-jpa-eclipselink/src/test/resources"/>
+	<classpathentry kind="src" path="100-jpa-eclipselink/src/main/resources"/>
+	<classpathentry kind="src" path="100-jpa-eclipselink/src/main/java"/>
 	<classpathentry kind="src" path="020-java-quickstart-gradlew/src/main/java"/>
 	<classpathentry kind="src" path="030-gradle-wrapper/src/main/java"/>
 	<classpathentry kind="src" path="050-external-dependencies/src/main/java"/>
@@ -8,10 +12,6 @@
 	<classpathentry kind="src" path="060-eclipse-integration/src/main/java"/>
 	<classpathentry kind="src" path="055-junit/src/main/java"/>
 	<classpathentry kind="src" path="055-junit/src/test/java"/>
-	<classpathentry kind="src" path="100-jpa/src/main/java"/>
-	<classpathentry kind="src" path="100-jpa/src/test/java"/>
-	<classpathentry kind="src" path="100-jpa/src/main/resources"/>
-	<classpathentry kind="src" path="100-jpa/src/test/resources"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/groovy-all-2.1.1.jar"/>
