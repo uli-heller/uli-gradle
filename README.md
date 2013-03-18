@@ -447,6 +447,9 @@ Example: See [100-jpa-eclipselink](100-jpa-eclipselink).
 
 * View the test reports: `firefox build/reports/tests/index.html`
 
+Note: See [102-jpa-eclipselink](102-jpa-eclipselink) contains the same
+project but uses derby-10.10.1.0 (pre release) instead of 10.9.1.0.
+
 Groovy Quickstart
 -----------------
 
