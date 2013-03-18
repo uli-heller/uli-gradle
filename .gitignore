@@ -5,6 +5,6 @@
 */.project
 */.settings
 99x-*/lib
-*/derbyDb
-*/derby.log
+derbyDb
+derby.log
 build

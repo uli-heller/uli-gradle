@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="055-junit/src/test/java"/>
 	<classpathentry kind="src" path="100-jpa/src/main/java"/>
 	<classpathentry kind="src" path="100-jpa/src/test/java"/>
+	<classpathentry kind="src" path="100-jpa/src/main/resources"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/groovy-all-2.1.1.jar"/>
@@ -20,6 +21,8 @@
 	<classpathentry kind="lib" path="99x-jar-collector/lib/org.eclipse.persistence.core-2.4.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/org.eclipse.persistence.jpa-2.4.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/org.eclipse.persistence.jpa.jpql-2.4.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/derby-10.9.1.0.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/junit-4.11.jar"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>
