@@ -1,7 +1,7 @@
 apply plugin: "java"
 
 String eclipseLinkVersion = '2.4.1';
-String derbyVersion = '10.9.1.0';
+String derbyVersion = '10.10.1.0';
 
 dependencies {
    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: eclipseLinkVersion
@@ -18,6 +18,9 @@ repositories {
     mavenCentral()
     maven {
       url 'http://download.eclipse.org/rt/eclipselink/maven.repo'
+    }
+    flatDir {
+      dirs 'lib'
     }
 }
 
