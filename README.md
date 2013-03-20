@@ -486,3 +486,17 @@ Example: See [200-groovy-quickstart](200-groovy-quickstart).
   
   Total time: 3.691 secs
   ```
+
+Appendix
+--------
+
+### Setup Eclipse For The Git Project
+
+In chapter [Integration Into Eclipse](#integration-into-eclipse), there is a description on how to use eclipse for a part of this git project. When working on the git project in complete, the setup is a little bit more complex.
+
+```
+cd 99x-jar-collector
+./gradlew collectJars
+```
+
+Afterwards, you can import the git project into your eclipse workspace.
