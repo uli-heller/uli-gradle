@@ -1,7 +1,7 @@
 apply plugin: "java"
 
 String eclipseLinkVersion = '2.4.1';
-String derbyVersion = '10.10.1.0';
+String derbyVersion = '10.10.1.1';
 
 dependencies {
    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: eclipseLinkVersion
