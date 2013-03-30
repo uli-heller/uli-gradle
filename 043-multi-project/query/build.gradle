@@ -1,14 +1,5 @@
 apply plugin: "java"
 
-String myPfx = ':..';
-if (hasProperty('pfx')) {
-  myPfx = pfx;
-} else {
-  ext {
-    pfx = myPfx;
-  }
-}
-
 dependencies {
-  compile project("${myPfx}:base")
+  compile project(':base')
 }

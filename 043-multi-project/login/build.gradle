@@ -1,10 +1,5 @@
 apply plugin: "java"
 
-String myPfx = '..';
-if (hasProperty('pfx')) {
-  myPfx = pfx;
-}
-
 dependencies {
-  compile project("${myPfx}:util")
+  compile project('util')
 }
