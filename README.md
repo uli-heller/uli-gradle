@@ -257,13 +257,15 @@ Example: See [043-flat-multi-project](043-flat-multi-project).
 
 * Starting point: You have multiple separate projects
 
-    * util
+    * [util](043-flat-multi-project/util)
 
-    * base
+    * [base](043-flat-multi-project/base)
 
-    * query
+    * [query](043-flat-multi-project/query)
 
-    * login
+    * [login](043-flat-multi-project/login)
+
+    * [top](043-flat-multi-project/top)
 
 * All these project do live within separate folders
 
@@ -277,13 +279,16 @@ Example: See [043-flat-multi-project](043-flat-multi-project).
 
     * login: Depends on util
 
-  !(Dependencies)[043-flat-multi-project/doc/dependencies.png]
+    * top: Depends on all other projects
 
-* Typically, you would probably start with a top level settings.gradle and build.gradle
+  ![Dependencies](043-flat-multi-project/doc/dependencies.png)
+
+
+* Typically, you would probably start with a top level (settings.gradle)[043-flat-multi-project/settings.gradle] and (build.gradle)[043-flat-multi-project/build.gradle]
 
     * settings.gradle: Includes all projects
 
-    * build.gradle: Defines all common build rules
+    * build.gradle: Defines all common build rules and the dependencies between the projects
 
 * TBC
 
