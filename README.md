@@ -12,6 +12,7 @@ Overview
 * [Avoiding Downloads With Gradle Wrapper](#avoiding-downloads-with-gradle-wrapper) (optional)
 * [Gradle Wrapper](#gradle-wrapper) (optional)
 * [Multi Project Build](#multi-project-build)
+* [Flat Multi Project Build](#flat-multi-project-build) (optional)
 * [External Dependencies](#external-dependencies)
 * [Bundle An Application](#bundle-an-application)
 * [Adding JUnit Tests](#adding-junit-tests)
@@ -248,6 +249,43 @@ Example: See [040-multi-project](040-multi-project).
   
   Total time: 3.841 secs
   ```
+
+Flat Multi Project Build
+------------------------
+
+Example: See [043-flat-multi-project](043-flat-multi-project).
+
+* Starting point: You have multiple separate projects
+
+    * util
+
+    * base
+
+    * query
+
+    * login
+
+* All these project do live within separate folders
+
+* There are these dependencies between them:
+
+    * util: Depends on nothing
+
+    * base: Depends on util
+
+    * query: Depends on base
+
+    * login: Depends on util
+
+  !(Dependencies)[043-flat-multi-project/doc/dependencies.png]
+
+* Typically, you would probably start with a top level settings.gradle and build.gradle
+
+    * settings.gradle: Includes all projects
+
+    * build.gradle: Defines all common build rules
+
+* TBC
 
 External Dependencies
 ---------------------
