@@ -271,26 +271,47 @@ Example: See [043-flat-multi-project](043-flat-multi-project).
 
 * There are these dependencies between them:
 
-    * util: Depends on nothing
+    * [util](043-flat-multi-project/util): Depends on nothing
 
-    * base: Depends on util
+    * [base](043-flat-multi-project/base): Depends on util
 
-    * query: Depends on base
+    * [query](043-flat-multi-project/query): Depends on base
 
-    * login: Depends on util
+    * [login](043-flat-multi-project/login): Depends on util
 
-    * top: Depends on all other projects
+    * [top](043-flat-multi-project/top): Depends on all other projects
 
   ![Dependencies](043-flat-multi-project/doc/dependencies.png)
 
+* Start with the most basic project having no dependencies to other projects: [util](043-flat-multi-project/util):
 
-* Typically, you would probably start with a top level (settings.gradle)[043-flat-multi-project/settings.gradle] and (build.gradle)[043-flat-multi-project/build.gradle]
+    * Create [build.gradle](043-flat-multi-project/util/build.gradle)
 
-    * settings.gradle: Includes all projects
+    * Do a test build: `gradle check` - expect "BUILD SUCCESSFUL"
 
-    * build.gradle: Defines all common build rules and the dependencies between the projects
+* Do the next level projects now: [base](043-flat-multi-project/base) and [login](043-flat-multi-project/login):
 
-* TBC
+    * Create build.gradle files - [base/build.gradle](043-flat-multi-project/base/build.gradle),  [login/build.gradle](043-flat-multi-project/login/build.gradle)
+
+    * Create settings.gradle files - [base/settings.gradle](043-flat-multi-project/base/settings.gradle),  [login/settings.gradle](043-flat-multi-project/login/settings.gradle)
+
+    * Do a test builds for these projects: `gradle check` - expect "BUILD SUCCESSFUL"
+
+* Do the [query](043-flat-multi-project/base) project now: 
+
+    * Create [build.gradle](043-flat-multi-project/query/build.gradle)
+
+    * Create [settings.gradle](043-flat-multi-project/query/settings.gradle). Please note: You have to include "base" and "util", although "util" is a transitiv dependency of "base"!
+
+    * Do a test build: `gradle check` - expect "BUILD SUCCESSFUL"
+
+* Do the [top](043-flat-multi-project/top) project now: 
+
+    * Create [build.gradle](043-flat-multi-project/top/build.gradle)
+
+    * Create [settings.gradle](043-flat-multi-project/top/settings.gradle). Include all the other projects here
+
+    * Do a test build: `gradle check` - expect "BUILD SUCCESSFUL"
 
 External Dependencies
 ---------------------
