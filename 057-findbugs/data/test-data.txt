@@ -1,0 +1,8 @@
+This is a file containing some test data for "html-unescape":
+
+* ä - &auml;
+* ö - &ouml;
+* ü - &uuml;
+* Ä - &Auml;
+* Ö - &Ouml;
+* Ü - &Uuml;
