@@ -6,9 +6,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.nio.charset.Charset;
 
-public class SHA2 {
+public class SHA2_2 {
 
-    public String sha1hex(String input) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String sha2hex(String input) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         byte[] bytesOfMessage = input.getBytes(Charset.defaultCharset());
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] thedigest = md.digest(bytesOfMessage);
@@ -22,9 +22,9 @@ public class SHA2 {
     }
 
     static public void main(String[] args) throws Exception {
-        SHA2 sha1 = new SHA2();
+        SHA2_2 sha2_2 = new SHA2_2();
         for (String arg : args) {
-            System.out.println(sha1.sha1hex(arg));
+            System.out.println(sha2_2.sha2hex(arg));
         }
     }
 }
