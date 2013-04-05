@@ -546,7 +546,7 @@ Example: See [200-groovy-quickstart](200-groovy-quickstart).
     mavenCentral()
   }
   dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.1.1'
+    compile 'org.codehaus.groovy:groovy-all:2.1.2'
   }
   ```
 
@@ -554,8 +554,8 @@ Example: See [200-groovy-quickstart](200-groovy-quickstart).
 
   ```
   $ gradle jar
-  Download http://repo1.maven.org/.../2.1.1/groovy-all-2.1.1.pom
-  Download http://repo1.maven.org/.../2.1.1/groovy-all-2.1.1.jar
+  Download http://repo1.maven.org/.../2.1.2/groovy-all-2.1.2.pom
+  Download http://repo1.maven.org/.../2.1.2/groovy-all-2.1.2.jar
   :compileJava UP-TO-DATE
   :compileGroovy
   :processResources UP-TO-DATE
