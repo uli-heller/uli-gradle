@@ -17,7 +17,7 @@ Overview
 * [Bundle An Application](#bundle-an-application)
 * [Adding JUnit Tests](#adding-junit-tests)
 * [Adding Findbugs](#adding-findbugs)
-* [Integration Into Eclipse](#integration-into-eclipse)
+* [Creating Eclipse Projects](#creating-eclipse-projects)
 * [Developing a Web Application](#developing-a-web-application)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
@@ -422,15 +422,15 @@ Example: See [057-findbugs](057-findbugs).
 
 * Fix findbugs issues
 
-Integration Into Eclipse
-------------------------
+Creating Eclipse Projects
+-------------------------
 
-Example: See [060-eclipse-integration](060-eclipse-integration).
+Example: See [060-creating-eclipse-projects](060-creating-eclipse-projects).
 
 * Start with a copy of a gradle project, for example create a copy
   of [050-external-dependencies](050-external-dependencies).
 
-* Modify the file [build.gradle](060-eclipse-integration/build.gradle):
+* Modify the file [build.gradle](060-creating-eclipse-projects/build.gradle):
   Add the eclipse plugin.
 
   ```
@@ -447,7 +447,7 @@ Example: See [060-eclipse-integration](060-eclipse-integration).
 
     * General - Existing Projects into Workspace - Next
 
-    * Select root directory: .../060-eclipse-integration
+    * Select root directory: .../060-creating-eclipse-projects
 
     * Finish
 
