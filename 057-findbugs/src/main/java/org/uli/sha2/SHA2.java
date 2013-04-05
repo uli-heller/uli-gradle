@@ -4,11 +4,12 @@ import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.nio.charset.Charset;
 
 public class SHA2 {
 
     public String sha1hex(String input) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        byte[] bytesOfMessage = input.getBytes();
+        byte[] bytesOfMessage = input.getBytes(Charset.defaultCharset());
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] thedigest = md.digest(bytesOfMessage);
         BigInteger bigInt = new BigInteger(1, thedigest);
