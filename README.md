@@ -458,14 +458,14 @@ system.
 Developing a Web Application
 ----------------------------
 
-Example: See [070-webapp](070-webapp).
+Example: See [085-webapp](085-webapp).
 
 * Copy some files from another project
 
-    * `cd 070-webapp`
+    * `cd 085-webapp`
     * `cp ../020-java-quickstart-gradlew/gradle* .`
 
-* Create the file [build.gradle](070-webapp/build.gradle)
+* Create the file [build.gradle](085-webapp/build.gradle)
 
   ```
   apply plugin: "java"
@@ -474,14 +474,14 @@ Example: See [070-webapp](070-webapp).
 
 * Create the webapp folder: `mkdir -p src/main/webapp/WEB-INF`
 
-* Create a welcome file [src/main/webapp/index.html](070-webapp/src/main/webapp/index.html)
+* Create a welcome file [src/main/webapp/index.html](085-webapp/src/main/webapp/index.html)
 
-* Create the file [src/main/webapp/WEB-INF/web.xml](070-webapp/src/main/webapp/WEB-INF/web.xml)
+* Create the file [src/main/webapp/WEB-INF/web.xml](085-webapp/src/main/webapp/WEB-INF/web.xml)
 
 * Generate the war file: `./gradlew assemble`
 
 * Deploy the war file into Tomcat7: 
-  `cp build/libs/070-webapp.war /opt/apache-tomcat-7.0.37/webapps`
+  `cp build/libs/085-webapp.war /opt/apache-tomcat-7.0.37/webapps`
 
   Note: This assumes that your Tomcat7 installation resides in
   /opt/apache-tomcat-7.0.37.
@@ -489,7 +489,7 @@ Example: See [070-webapp](070-webapp).
 * Start Tomcat7:
   `/opt/apache-tomcat-7.0.37/bin/startup.sh`
 
-* Navigate your browser to [http://localhost:8080/070-webapp/](http://localhost:8080/070-webapp/)
+* Navigate your browser to [http://localhost:8080/085-webapp/](http://localhost:8080/085-webapp/)
 
   Note: This assumes that your Tomcat7 listens to port 8080, which is the
   default setting.
