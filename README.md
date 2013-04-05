@@ -16,6 +16,7 @@ Overview
 * [External Dependencies](#external-dependencies)
 * [Bundle An Application](#bundle-an-application)
 * [Adding JUnit Tests](#adding-junit-tests)
+* [Adding Findbugs](#adding-findbugs)
 * [Integration Into Eclipse](#integration-into-eclipse)
 * [Developing a Web Application](#developing-a-web-application)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
@@ -399,6 +400,27 @@ Example: See [055-junit](055-junit).
 * Execute the junit tests: `./gradlew check`
 
 * View the test report in your browser: `firefox build/reports/tests/index.html`
+
+Adding FindBugs
+---------------
+
+Example: See [057-findbugs](057-findbugs).
+
+* Start with a Java project, for example [055-junit](055-junit)
+
+* Modify [build.gradle](057-findbugs/build.gradle):
+
+    * Add findbugs plugin
+
+    * Enable html reports
+
+    * Disable xml reports
+
+* Execute the findbugs checks: `./gradlew check`
+
+* View the test report in your browser: `firefox build/reports/findbugs/main.html`
+
+* Fix findbugs issues
 
 Integration Into Eclipse
 ------------------------
