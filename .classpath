@@ -12,6 +12,8 @@
 	<classpathentry kind="src" path="055-junit/src/main/java"/>
 	<classpathentry kind="src" path="055-junit/src/test/java"/>
 	<classpathentry kind="src" path="060-creating-eclipse-projects/src/main/java"/>
+	<classpathentry kind="src" path="057-findbugs/src/main/java"/>
+	<classpathentry kind="src" path="057-findbugs/src/test/java"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
