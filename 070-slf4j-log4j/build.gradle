@@ -12,3 +12,7 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+clean.doLast {
+  project.delete 'logging.log', 'logging-junit.log'
+}
