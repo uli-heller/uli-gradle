@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="010-java-quickstart/src/main/java"/>
 	<classpathentry kind="src" path="100-jpa-eclipselink/src/test/java"/>
-	<classpathentry kind="src" path="100-jpa-eclipselink/src/test/resources"/>
 	<classpathentry kind="src" path="100-jpa-eclipselink/src/main/resources"/>
 	<classpathentry kind="src" path="100-jpa-eclipselink/src/main/java"/>
 	<classpathentry kind="src" path="020-java-quickstart-gradlew/src/main/java"/>
