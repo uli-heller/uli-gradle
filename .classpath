@@ -14,6 +14,8 @@
 	<classpathentry kind="src" path="060-creating-eclipse-projects/src/main/java"/>
 	<classpathentry kind="src" path="057-findbugs/src/main/java"/>
 	<classpathentry kind="src" path="057-findbugs/src/test/java"/>
+	<classpathentry kind="src" path="070-slf4j-log4j/src/main/java"/>
+	<classpathentry kind="src" path="070-slf4j-log4j/src/test/java"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -27,5 +29,8 @@
 	<classpathentry kind="lib" path="99x-jar-collector/lib/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/groovy-all-2.1.2.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="99x-jar-collector/lib/slf4j-log4j12-1.7.5.jar"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>
