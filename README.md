@@ -455,6 +455,51 @@ Note: The eclipse project files to contain absolut paths to your working
 environment, so you will probably never store them in a version control
 system.
 
+Logging Based On SLF4J/LOG4J
+----------------------------
+
+Example: See [070-slf4j-log4j](070-slf4j-log4j)
+
+* Start with an ordinary gradle project
+
+    * build.gradle ... a build script for a java project
+
+    * src/main/java ... java sources
+
+    * src/test/java ... junit tests
+
+* Add dependency to SLF4J and LOG4J to the build script
+
+* Add loggers to your source code
+
+* Do a build and execute junit tests: `gradle check`
+
+* Examine the test report: There are warnings related to log4j configuration
+
+     * `firefox build/reports/tests/index.html`
+
+     * Classes
+
+     * org.uli.logging.EchoServerTest
+
+     * Standard error
+
+  shows this:
+
+  ```
+  log4j:WARN No appenders could be found for logger (org.uli.logging.EchoServer).
+  log4j:WARN Please initialize the log4j system properly.
+  log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+  ```
+
+* Create a log4j config file for test: src/test/resources/log4j.xml
+
+* Do a build and execute junit tests again: `gradle check`
+
+* Verify: No more warnings within test reports, a log file has been created!
+
+* Note: Running the application produces a similar warning as before. This can be fixed by creating a log4j config file for production: src/main/resources/log4j.xml
+
 Developing a Web Application
 ----------------------------
 
