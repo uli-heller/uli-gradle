@@ -1,4 +1,7 @@
 apply plugin: "java"
+apply plugin: "application"
+
+mainClassName = 'org.uli.logging.EchoServer'
 
 dependencies {
     compile group: 'org.slf4j',     name: 'slf4j-api',     version: '1.7.5'

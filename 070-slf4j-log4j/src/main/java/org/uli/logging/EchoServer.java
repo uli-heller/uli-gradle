@@ -12,4 +12,11 @@ public class EchoServer {
 	logger.debug("<- result={}", result);
 	return result;
     }
+
+    public static void main(String[] args) {
+	EchoServer echoServer = new EchoServer();
+        for (String shoutOut : args) {
+	    System.out.println("'" + shoutOut + "' -> '" + echoServer.echo(shoutOut) + "'");
+        }
+    }
 }
