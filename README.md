@@ -18,6 +18,8 @@ Overview
 * [Adding JUnit Tests](#adding-junit-tests)
 * [Adding Findbugs](#adding-findbugs)
 * [Creating Eclipse Projects](#creating-eclipse-projects)
+* [Logging Based On SLF4J/LOG4J](#logging-based-on-slf4j-log4j)
+* [Logging Based On SLF4J/LOGBACK](#logging-based-on-slf4j-logback)
 * [Developing a Web Application](#developing-a-web-application)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
@@ -499,6 +501,33 @@ Example: See [070-slf4j-log4j](070-slf4j-log4j)
 * Verify: No more warnings within test reports, a log file has been created!
 
 * Note: Running the application produces a similar warning as before. This can be fixed by creating a log4j config file for production: src/main/resources/log4j.xml
+
+Logging Based On SLF4J/LOGBACK
+------------------------------
+
+Example: See [072-slf4j-logback](072-slf4j-logback)
+
+This is pretty similar to "Logging Based On SLF4J/LOG4J"!
+
+* Start with an ordinary gradle project
+
+    * build.gradle ... a build script for a java project
+
+    * src/main/java ... java sources
+
+    * src/test/java ... junit tests
+
+* Add dependency to SLF4J and LOGBACK to the build script
+
+* Add loggers to your source code
+
+* Add logback configuration files for tests and production
+
+    * src/main/resources/logback.xml
+
+    * src/test/resources/logback-test.xml
+
+* Do a build and execute junit tests: `gradle check`
 
 Developing a Web Application
 ----------------------------

@@ -15,6 +15,8 @@
 	<classpathentry kind="src" path="057-findbugs/src/test/java"/>
 	<classpathentry kind="src" path="070-slf4j-log4j/src/main/java"/>
 	<classpathentry kind="src" path="070-slf4j-log4j/src/test/java"/>
+	<classpathentry kind="src" path="072-slf4j-logback/src/main/java"/>
+	<classpathentry kind="src" path="072-slf4j-logback/src/test/java"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="99x-jar-collector/lib/commons-cli-1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
