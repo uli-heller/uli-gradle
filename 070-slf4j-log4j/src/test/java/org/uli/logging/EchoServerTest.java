@@ -7,8 +7,8 @@ public class EchoServerTest {
 
     @Test
     public void testEcho() {
-	EchoServer echoServer = new EchoServer();
-	String echo = echoServer.echo("UliWasHere!");
-	assertEquals("UliWasHere!", echo);
+        EchoServer echoServer = new EchoServer();
+        String echo = echoServer.echo("UliWasHere!");
+        assertEquals("UliWasHere!", echo);
     }
 }
