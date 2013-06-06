@@ -556,13 +556,13 @@ Example: See [085-webapp](085-webapp).
 * Generate the war file: `./gradlew assemble`
 
 * Deploy the war file into Tomcat7: 
-  `cp build/libs/085-webapp.war /opt/apache-tomcat-7.0.37/webapps`
+  `cp build/libs/085-webapp.war /opt/apache-tomcat-7.0.40/webapps`
 
   Note: This assumes that your Tomcat7 installation resides in
-  /opt/apache-tomcat-7.0.37.
+  /opt/apache-tomcat-7.0.40.
 
 * Start Tomcat7:
-  `/opt/apache-tomcat-7.0.37/bin/startup.sh`
+  `/opt/apache-tomcat-7.0.40/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/085-webapp/](http://localhost:8080/085-webapp/)
 
@@ -606,13 +606,13 @@ Example: See [090-jsf-webapp](090-jsf-webapp).
 * Generate the war file: `./gradlew assemble`
 
 * Deploy the war file into Tomcat7: 
-  `cp build/libs/090-jsf-webapp.war /opt/apache-tomcat-7.0.37/webapps`
+  `cp build/libs/090-jsf-webapp.war /opt/apache-tomcat-7.0.40/webapps`
 
   Note: This assumes that your Tomcat7 installation resides in
-  /opt/apache-tomcat-7.0.37.
+  /opt/apache-tomcat-7.0.40.
 
 * Start Tomcat7:
-  `/opt/apache-tomcat-7.0.37/bin/startup.sh`
+  `/opt/apache-tomcat-7.0.40/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/090-jsf-webapp/](http://localhost:8080/090-jsf-webapp/)
 
