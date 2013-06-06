@@ -2,7 +2,7 @@ apply plugin: "java"
 apply plugin: "war"
 
 dependencies {
-    compile group: 'org.glassfish', name: 'javax.faces', version: '2.1+'
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.1.22'
 }
 
 repositories {
