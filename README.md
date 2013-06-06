@@ -21,6 +21,7 @@ Overview
 * [Logging Based On SLF4J/LOG4J](#logging-based-on-slf4j-log4j)
 * [Logging Based On SLF4J/LOGBACK](#logging-based-on-slf4j-logback)
 * [Developing a Web Application](#developing-a-web-application)
+* [Developing a JSF Web Application](#developing-a-jsf-web-application)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
 
@@ -564,6 +565,56 @@ Example: See [085-webapp](085-webapp).
   `/opt/apache-tomcat-7.0.37/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/085-webapp/](http://localhost:8080/085-webapp/)
+
+  Note: This assumes that your Tomcat7 listens to port 8080, which is the
+  default setting.
+
+Developing a JSF Web Application
+--------------------------------
+
+Example: See [090-jsf-webapp](090-jsf-webapp).
+
+* Start with an ordinary web application project
+
+    * `cp -a 085-webapp 090-jsf-webapp`
+
+* Extend the file [build.gradle](090-webapp/build.gradle)
+
+  ```
+  apply plugin: "java"
+  apply plugin: "war"
+
+  dependencies {
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.1.22'
+  }
+
+  repositories {
+    mavenCentral()
+  }
+  ```
+
+* Implement your jsf application. For my example, these are the required
+  files:
+
+    * src/main/java/org/uli/HelloBean.java
+    * src/main/webapp/WEB-INF/web.xml
+    * src/main/webapp/hello.xhtml
+    * src/main/webapp/welcome.xhtml
+
+  Note: These files have been derived from mkyong jsf tutorials!
+
+* Generate the war file: `./gradlew assemble`
+
+* Deploy the war file into Tomcat7: 
+  `cp build/libs/090-jsf-webapp.war /opt/apache-tomcat-7.0.37/webapps`
+
+  Note: This assumes that your Tomcat7 installation resides in
+  /opt/apache-tomcat-7.0.37.
+
+* Start Tomcat7:
+  `/opt/apache-tomcat-7.0.37/bin/startup.sh`
+
+* Navigate your browser to [http://localhost:8080/090-jsf-webapp/](http://localhost:8080/090-jsf-webapp/)
 
   Note: This assumes that your Tomcat7 listens to port 8080, which is the
   default setting.
