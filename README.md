@@ -14,6 +14,7 @@ Overview
 * [Multi Project Build](#multi-project-build)
 * [Flat Multi Project Build](#flat-multi-project-build) (optional)
 * [External Dependencies](#external-dependencies)
+* [External Dependencies via Proxy Server](#external-dependencies-via-proxy-server)
 * [Bundle An Application](#bundle-an-application)
 * [Adding JUnit Tests](#adding-junit-tests)
 * [Adding Findbugs](#adding-findbugs)
@@ -350,6 +351,29 @@ Example: See [050-external-dependencies](050-external-dependencies).
   repositories {
     mavenCentral()
   }
+  ```
+
+* Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
+
+External Dependencies via Proxy Server
+--------------------------------------
+
+Example: See [051-proxy](051-proxy).
+
+* Starting point: A simple project having external dependencies, for example
+  [050-external-dependencies](050-external-dependencies) and an environment
+  where a proxy server is required for accessing "the web"
+
+* Try a build: `./gradlew check` -> "BUILD FAILED"
+
+* Create a file named "gradle.properties" and specify your proxy settings
+
+  ```
+  systemProp.http.proxyHost=10.2.100.1
+  systemProp.http.proxyPort=8080
+  systemProp.http.proxyUser=username
+  systemProp.http.proxyPassword=password
+  systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost
   ```
 
 * Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
