@@ -15,6 +15,7 @@ Overview
 * [Flat Multi Project Build](#flat-multi-project-build) (optional)
 * [External Dependencies](#external-dependencies)
 * [External Dependencies via Proxy Server](#external-dependencies-via-proxy-server)
+* [Forcing A Resolution](#forcing-a-resolution)
 * [Bundle An Application](#bundle-an-application)
 * [Adding JUnit Tests](#adding-junit-tests)
 * [Adding Findbugs](#adding-findbugs)
@@ -377,6 +378,32 @@ Example: See [051-proxy](051-proxy).
   ```
 
 * Try another build: `./gradlew check` -> "BUILD SUCCESSFUL"
+
+Forcing A Resolution
+--------------------
+
+Example: See [0512-force-resolution](0512-force-resolution)
+
+* Starting point: A project having external dependencies, for example
+  [072-slf4j-logback](072-slf4j-logback)
+
+* Examine the project dependencies by looking at the output of
+  `gradle dependencies`: Expect to see all dependencies to SLF4J
+  to be resolved to SLF4J-1.7.5
+
+* Add these lines to the file "build.gradle"
+
+  ```
+  configurations.all {
+    resolutionStrategy {
+      force 'org.slf4j:slf4j-api:1.7.2'
+    }
+  }
+  ```
+
+* Examine the project dependencies by looking at the output of
+  `gradle dependencies`: Expect to see all dependencies to SLF4J
+  to be resolved to SLF4J-1.7.2
 
 Bundle An Application
 ---------------------
