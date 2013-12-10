@@ -24,6 +24,7 @@ Overview
 * [Logging Based On SLF4J/LOGBACK](#logging-based-on-slf4j-logback)
 * [Developing a Web Application](#developing-a-web-application)
 * [Developing a JSF Web Application](#developing-a-jsf-web-application)
+* [A JSF Web Application With JavaMelody Monitoring](#web-application-monitoring-with-javamelody)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
 
@@ -666,6 +667,72 @@ Example: See [090-jsf-webapp](090-jsf-webapp).
   `/opt/apache-tomcat-7.0.40/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/090-jsf-webapp/](http://localhost:8080/090-jsf-webapp/)
+
+  Note: This assumes that your Tomcat7 listens to port 8080, which is the
+  default setting.
+
+The JSF application works OK in Tomcat7. There are issues when using Jetty.
+Adding the jetty plugin and running the application by `./gradlew jettyRun` doesn't work.
+
+Web Application Monitoring With JavaMelody
+------------------------------------------
+
+Example: See [092-javamelody](092-javamelody).
+
+* Start with an ordinary web application project
+
+    * `cp -a 090-jsf-webapp 092-javamelody`
+
+* Extend the file [build.gradle](092-javamelody/build.gradle) - add jrobin and javamelody
+
+      apply plugin: "java"
+      apply plugin: "war"
+      
+      dependencies {
+          compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
+          runtime 'net.bull.javamelody:javamelody-core:1.48.0'
+          runtime 'org.jrobin:jrobin:1.5.9'
+          runtime 'org.slf4j:slf4j-api:1.7.5'
+      }
+      
+      repositories {
+          mavenCentral()
+      }
+
+* Extend the web.xml (src/main/webapp/WEB-INF/web.xml):
+
+        <filter>
+                <filter-name>monitoring</filter-name>
+                <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+        </filter>
+        <filter-mapping>
+                <filter-name>monitoring</filter-name>
+                <url-pattern>/*</url-pattern>
+        </filter-mapping>
+        <listener>
+                <listener-class>net.bull.javamelody.SessionListener</listener-class>
+        </listener>
+
+* Generate the war file: `./gradlew assemble`
+
+* Deploy the war file into Tomcat7: 
+  `cp build/libs/092-javamelody.war /opt/apache-tomcat-7.0.40/webapps`
+
+  Note: This assumes that your Tomcat7 installation resides in
+  /opt/apache-tomcat-7.0.40.
+
+* Start Tomcat7:
+  `/opt/apache-tomcat-7.0.40/bin/startup.sh`
+
+* Navigate your browser to [http://localhost:8080/092-javamelody/](http://localhost:8080/092-javamelody/)
+
+  Note: This assumes that your Tomcat7 listens to port 8080, which is the
+  default setting.
+
+  The JSF application works OK in Tomcat7. There are issues when using Jetty.
+  Adding the jetty plugin and running the application by `./gradlew jettyRun` doesn't work.
+
+* Navigate your browser to [http://localhost:8080/092-javamelody/monitoring](http://localhost:8080/092-javamelody/monitoring)
 
   Note: This assumes that your Tomcat7 listens to port 8080, which is the
   default setting.
