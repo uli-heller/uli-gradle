@@ -685,19 +685,19 @@ Example: See [092-javamelody](092-javamelody).
 
 * Extend the file [build.gradle](092-javamelody/build.gradle) - add jrobin and javamelody
 
-      apply plugin: "java"
-      apply plugin: "war"
-      
-      dependencies {
-          compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
-          runtime 'net.bull.javamelody:javamelody-core:1.48.0'
-          runtime 'org.jrobin:jrobin:1.5.9'
-          runtime 'org.slf4j:slf4j-api:1.7.5'
-      }
-      
-      repositories {
-          mavenCentral()
-      }
+        apply plugin: "java"
+        apply plugin: "war"
+        
+        dependencies {
+            compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
+            runtime 'net.bull.javamelody:javamelody-core:1.48.0'
+            runtime 'org.jrobin:jrobin:1.5.9'
+            runtime 'org.slf4j:slf4j-api:1.7.5'
+        }
+        
+        repositories {
+            mavenCentral()
+        }
 
 * Extend the web.xml (src/main/webapp/WEB-INF/web.xml):
 
