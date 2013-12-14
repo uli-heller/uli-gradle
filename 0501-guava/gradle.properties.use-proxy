@@ -1,0 +1,2 @@
+systemProp.http.proxyHost = localhost
+systemProp.http.proxyPort = 8888
