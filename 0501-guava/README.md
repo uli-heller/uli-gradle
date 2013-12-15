@@ -46,3 +46,15 @@ Internet Access Via Proxy At Home
     BUILD SUCCESSFUL
     
     Total time: 6.34 secs
+
+### forward-proxy.log
+
+Looking at the log file of the proxy server shows access to these URLs:
+
+* GET /maven2/com/google/guava/guava/15.0/guava-15.0.pom HTTP/1.1
+* GET /maven2/com/google/guava/guava-parent/15.0/guava-parent-15.0.pom HTTP/1.1
+* HEAD /maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom HTTP/1.1
+* GET /maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1 HTTP/1.1
+* HEAD /maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.jar HTTP/1.1
+* HEAD /maven2/com/google/guava/guava-parent/15.0/guava-parent-15.0.jar HTTP/1.1
+* GET /maven2/com/google/guava/guava/15.0/guava-15.0.jar HTTP/1.1
