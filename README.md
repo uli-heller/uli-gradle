@@ -24,6 +24,7 @@ Overview
 * [Logging Based On SLF4J/LOGBACK](#logging-based-on-slf4j-logback)
 * [Developing a Web Application](#developing-a-web-application)
 * [Developing a JSF Web Application](#developing-a-jsf-web-application)
+* [Debugging a JSF Web Application](#debugging-a-jsf-web-application)
 * [A JSF Web Application With JavaMelody Monitoring](#web-application-monitoring-with-javamelody)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
@@ -633,14 +634,14 @@ Example: See [090-jsf-webapp](090-jsf-webapp).
 
     * `cp -a 085-webapp 090-jsf-webapp`
 
-* Extend the file [build.gradle](090-webapp/build.gradle)
+* Extend the file [build.gradle](090-jsf-webapp/build.gradle)
 
   ```
   apply plugin: "java"
   apply plugin: "war"
 
   dependencies {
-    compile group: 'org.glassfish', name: 'javax.faces', version: '2.1.22'
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+'
   }
 
   repositories {
@@ -676,6 +677,52 @@ Example: See [090-jsf-webapp](090-jsf-webapp).
 
 The JSF application works OK in Tomcat7. There are issues when using Jetty.
 Adding the jetty plugin and running the application by `./gradlew jettyRun` doesn't work.
+
+Debugging a JSF Web Application
+--------------------------------
+
+Example: See [091-debug-jsf](091-debug-jsf).
+
+* Start with an ordinary jsf web application project
+
+    * `cp -a 090-jsf-webapp 091-debug-jsf`
+
+* Extend the file [build.gradle](091-debug-jsf/build.gradle)
+
+  ```
+  apply plugin: "java"
+  apply plugin: "war"
+  apply plugin: "eclipse-wtp"
+
+  dependencies {
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+'
+  }
+
+  repositories {
+    mavenCentral()
+  }
+  ```
+
+* Create the eclipse project
+
+    * `gradlew eclipse`
+
+* Start eclipse and import the project
+
+* Within eclipse, create a new server
+
+    * File - New - Other
+    * Server - Server - Next
+    * Apache - Tomcat v7.0 Server - Next
+    * Tomcat installation directors: /opt/apache-tomcat-7.0.50 - Next
+    * Add resource "091-debug-jsf" - Finish
+
+* Within eclipse, debug the project
+
+    * Run - Debug As - Debug on server
+
+The embedded tomcat will be started and the embedded browser shows up opening
+http://localhost:8080/091-debug-jsf/.
 
 Web Application Monitoring With JavaMelody
 ------------------------------------------

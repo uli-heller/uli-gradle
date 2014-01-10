@@ -1,0 +1,11 @@
+apply plugin: "java"
+apply plugin: "war"
+apply plugin: "eclipse-wtp"
+
+dependencies {
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
+}
+
+repositories {
+    mavenCentral()
+}
