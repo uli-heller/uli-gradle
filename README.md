@@ -31,25 +31,28 @@ Overview
 Gradle Coldstart
 ----------------
 
-* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-1.6-all.zip)
+* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-1.10-all.zip)
 
-* Unzip it to a folder of your choice, for example $HOME/opt/gradle-1.6
+* Unzip it to a folder of your choice, for example $HOME/opt/gradle-1.10
 
-* Add $HOME/opt/gradle-1.6/bin to the PATH environment variable
+* Add $HOME/opt/gradle-1.10/bin to the PATH environment variable
 
 * Execute `gradle -v` and expect an output like this
 
   ```
   ------------------------------------------------------------
-  Gradle 1.6
+  Gradle 1.10
   ------------------------------------------------------------
-
-  Gradle build time: Dienstag, 7. Mai 2013 09:12 Uhr UTC
-  Groovy: 1.8.6
-  Ant: Apache Ant(TM) version 1.8.4 compiled on May 22 2012
-  Ivy: 2.2.0
-  JVM: 1.6.0_27 (Sun Microsystems Inc. 20.0-b12)
-  OS: Linux 3.8.0-23-generic amd64
+  
+  Build time:   2013-12-17 09:28:15 UTC
+  Build number: none
+  Revision:     36ced393628875ff15575fa03d16c1349ffe8bb6
+  
+  Groovy:       1.8.6
+  Ant:          Apache Ant(TM) version 1.9.2 compiled on July 8 2013
+  Ivy:          2.2.0
+  JVM:          1.6.0_27 (Sun Microsystems Inc. 20.0-b12)
+  OS:           Linux 3.12.6-031206-generic amd64
   ```
 
 Java Quickstart
@@ -98,11 +101,11 @@ Note: You don't have to install gradle first!
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.6-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
   ................................................
   .....................................................
-  Unzipping .../.gradle/wrapper/dists/gradle-1.6-bin/.../gradle-1.6-bin.zip to .../.gradle/wrapper/dists/gradle-1.6-bin/...
-  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.6-bin/.../gradle-1.6/bin/gradle
+  Unzipping .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10-bin.zip to .../.gradle/wrapper/dists/gradle-1.10-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
@@ -124,7 +127,7 @@ Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew)
 
   ```
   otherpc$ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.6-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
   ................................................^C
   otherpc$
   ```
@@ -166,7 +169,7 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
   apply plugin: "java"
 
   task wrapper(type: Wrapper) {
-    gradleVersion = '1.6'
+    gradleVersion = '1.10'
   }
   ```
 
@@ -195,11 +198,11 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.6-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
   ................................................
   .....................................................
-  Unzipping .../.gradle/wrapper/dists/gradle-1.6-bin/.../gradle-1.6-bin.zip to .../.gradle/wrapper/dists/gradle-1.6-bin/...
-  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.6-bin/.../gradle-1.6/bin/gradle
+  Unzipping .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10-bin.zip to .../.gradle/wrapper/dists/gradle-1.10-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
