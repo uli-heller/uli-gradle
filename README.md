@@ -681,6 +681,9 @@ Adding the jetty plugin and running the application by `./gradlew jettyRun` does
 Debugging a JSF Web Application
 --------------------------------
 
+In this chapter, we debug a jsf application within eclipse.
+We use a tomcat server which is embedded into eclipse for this.
+
 Example: See [091-debug-jsf](091-debug-jsf).
 
 * Start with an ordinary jsf web application project
