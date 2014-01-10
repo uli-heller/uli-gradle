@@ -725,7 +725,8 @@ Example: See [091-debug-jsf](091-debug-jsf).
     * Run - Debug As - Debug on server
 
 The embedded tomcat will be started and the embedded browser shows up opening
-http://localhost:8080/091-debug-jsf/.
+http://localhost:8080/091-debug-jsf/. Within the debug perspective, you'll
+be able to define breakpoints etc.
 
 Web Application Monitoring With JavaMelody
 ------------------------------------------
