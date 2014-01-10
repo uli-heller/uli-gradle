@@ -728,6 +728,73 @@ The embedded tomcat will be started and the embedded browser shows up opening
 http://localhost:8080/091-debug-jsf/. Within the debug perspective, you'll
 be able to define breakpoints etc.
 
+Debugging a JSF Web Application Using An External Tomcat
+--------------------------------------------------------
+
+In this chapter, we debug a jsf application within eclipse.
+We use a separate tomcat instance for this, so no need to define a
+tomcat server within eclipse and no need to configure deployment descriptors.
+
+Example: See [091-debug-jsf-3](091-debug-jsf-3).
+
+* Start with an ordinary jsf web application project
+
+    * `cp -a 090-jsf-webapp 091-debug-jsf-3`
+
+* Extend the file [build.gradle](091-debug-jsf-3/build.gradle)
+
+  ```
+  apply plugin: "java"
+  apply plugin: "war"
+  apply plugin: "eclipse-wtp"
+
+  dependencies {
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+'
+  }
+
+  repositories {
+    mavenCentral()
+  }
+  ```
+
+* Create the war file
+
+    * `gradlew war`
+
+* Install tomcat on your machine, for example within the folder
+  /opt/apache-tomcat-7.0.50
+
+* Create scripts to start and stop tomcat
+
+    * [start-tomcat.sh](091-debug-jsf-3/scripts/start-tomcat.sh) (for Linux)
+    * [stop-tomcat.sh](091-debug-jsf-3/scripts/stop-tomcat.sh) (for Linux)
+    * [start-tomcat.bat](091-debug-jsf-3/scripts/start-tomcat.bat) (for Windows)
+    * [stop-tomcat.bat](091-debug-jsf-3/scripts/stop-tomcat.bat) (for Windows)
+
+* Start tomcat
+
+    * `./scripts/start-tomcat.sh /opt/apache-tomcat-7.0.50`
+
+* Deploy the war file
+
+    * `cp build/libs/*.war catalina_base/webapps/.`
+
+* Start eclipse and import the project
+
+* Configure eclipse for remote debugging
+
+    * Run - Debug Configurations...
+    * Type: Remote Java Application
+    * New
+    * Debug
+
+* Open the class "HelloBean"
+
+* Open the perspective "Debug"
+
+Within the debug perspective, you'll
+be able to define breakpoints etc.
+
 Web Application Monitoring With JavaMelody
 ------------------------------------------
 
