@@ -2,8 +2,10 @@ apply plugin: "java"
 apply plugin: "war"
 apply plugin: "eclipse-wtp"
 
-//String tomcatVersion='7.0.50'; // 2014-01-10: Could not find org.eclipse.jdt.core.compiler:ecj:4.3.1.
-String tomcatVersion='7.0.47';
+// 7.0.50:
+//   2014-01-10: Could not find org.eclipse.jdt.core.compiler:ecj:4.3.1.
+//   2014-01-17: Fixed
+String tomcatVersion='7.0.50';
 
 dependencies {
     compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
