@@ -10,11 +10,11 @@ buildscript {
     mavenLocal()
   }
   dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M5")
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC1")
   }
 }
 
-def springBootVersion="0.5.0.M5";
+def springBootVersion="1.0.0.RC1";
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
