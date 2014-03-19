@@ -19,9 +19,9 @@ repositories {
     maven {
       url 'http://download.eclipse.org/rt/eclipselink/maven.repo'
     }
-    flatDir {
-      dirs 'lib'
-    }
+    //flatDir {
+    //  dirs 'lib'
+    //}
 }
 
 clean.doLast {

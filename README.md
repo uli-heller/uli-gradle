@@ -861,17 +861,17 @@ Example: See [092-javamelody](092-javamelody).
 JPA Based On EclipseLink
 ------------------------
 
-Example: See [100-jpa-eclipselink](100-jpa-eclipselink).
+Example: See [102-jpa-eclipselink](102-jpa-eclipselink).
 
 * Start with an empty project
 
 * Create/copy from another gradle project these folders and files
 
-    * [gradle](100-jpa-eclipselink/gradle)
-    * [gradlew](100-jpa-eclipselink/gradlew)
-    * [gradlew.bat](100-jpa-eclipselink/gradlew.bat)
+    * [gradle](102-jpa-eclipselink/gradle)
+    * [gradlew](102-jpa-eclipselink/gradlew)
+    * [gradlew.bat](102-jpa-eclipselink/gradlew.bat)
 
-* Create the file [build.gradle](100-jpa-eclipselink/build.gradle)
+* Create the file [build.gradle](102-jpa-eclipselink/build.gradle)
 
     * Java plugin
     * Compile dependency to EclipseLink
@@ -881,18 +881,15 @@ Example: See [100-jpa-eclipselink](100-jpa-eclipselink).
     * EclipseLink maven repository
     * Delete derby files on "clean"
 
-* Create a JPA entity class: [Person.java](100-jpa-eclipselink/src/main/java/org/uli/jpa/Person.java)
+* Create a JPA entity class: [Person.java](102-jpa-eclipselink/src/main/java/org/uli/jpa/Person.java)
 
-* Create a JUnit test class: [PersonTest.java](100-jpa-eclipselink/src/test/java/org/uli/jpa/PersonTest.java)
+* Create a JUnit test class: [PersonTest.java](102-jpa-eclipselink/src/test/java/org/uli/jpa/PersonTest.java)
 
-* Create a configuration file for your database: [persistence.xml]100-jpa-eclipselink/src/main/resources/persistence.xml)
+* Create a configuration file for your database: [persistence.xml]102-jpa-eclipselink/src/main/resources/persistence.xml)
 
 * Compile and run junit tests: `./gradlew check`
 
 * View the test reports: `firefox build/reports/tests/index.html`
-
-Note: See [102-jpa-eclipselink](102-jpa-eclipselink) contains the same
-project but uses derby-10.10.1.0 (pre release) instead of 10.9.1.0.
 
 Groovy Quickstart
 -----------------
