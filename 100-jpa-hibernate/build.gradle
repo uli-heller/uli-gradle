@@ -1,0 +1,27 @@
+apply plugin: "java"
+
+// Some remarks about different hibernate versions:
+//  -Hibernate-3.6.10.Final
+//   +- hibernate-jpa-2.0-api:1.0.1.Final"
+//  -Hibernate-4.1.4.Final
+//   +- hibernate-jpa-2.0-api:1.0.1.Final"
+//  -Hibernate-4.3.4.Final
+//   +- hibernate-jpa-2.1-api:1.0.0.Final"
+String hibernateVersion = '4.3.4.Final'; // '3+'; //'4.1.4.Final';
+String derbyVersion = '10.10.1.1';
+String junitVersion = '4.11';
+
+dependencies {
+   compile     "org.hibernate:hibernate-entitymanager:${hibernateVersion}"
+   testCompile "org.apache.derby:derby:${derbyVersion}"
+   testCompile "junit:junit:${junitVersion}"
+}
+
+repositories {
+    mavenCentral()
+}
+
+clean.doLast {
+  ant.delete(dir: 'derbyDb');
+  ant.delete(file: 'derby.log');
+}

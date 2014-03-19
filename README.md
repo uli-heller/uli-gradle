@@ -26,6 +26,7 @@ Overview
 * [Developing a JSF Web Application](#developing-a-jsf-web-application)
 * [Debugging a JSF Web Application](#debugging-a-jsf-web-application)
 * [A JSF Web Application With JavaMelody Monitoring](#web-application-monitoring-with-javamelody)
+* [JPA Based On Hibernate](#jpa-based-on-hibernate)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
 * [Groovy Quickstart](#groovy-quickstart)
 
@@ -858,6 +859,38 @@ Example: See [092-javamelody](092-javamelody).
   Note: This assumes that your Tomcat7 listens to port 8080, which is the
   default setting.
 
+JPA Based On Hibernate
+----------------------
+
+Example: See [100-jpa-hibernate](100-jpa-hibernate).
+
+* Start with an empty project
+
+* Create/copy from another gradle project these folders and files
+
+    * [gradle](100-jpa-hibernate/gradle)
+    * [gradlew](100-jpa-hibernate/gradlew)
+    * [gradlew.bat](100-jpa-hibernate/gradlew.bat)
+
+* Create the file [build.gradle](100-jpa-hibernate/build.gradle)
+
+    * Java plugin
+    * Compile dependency to HibernateEntityManager
+    * TestCompile dependency to Derby
+    * TestCompile dependency to JUnit
+    * Maven central
+    * Delete derby files on "clean"
+
+* Create a JPA entity class: [Person.java](100-jpa-hibernate/src/main/java/org/uli/jpahibernate/Person.java)
+
+* Create a JUnit test class: [PersonTest.java](100-jpa-hibernate/src/test/java/org/uli/jpahibernate/PersonTest.java)
+
+* Create a configuration file for your database: [persistence.xml]100-jpa-hibernate/src/main/resources/META-INF/persistence.xml)
+
+* Compile and run junit tests: `./gradlew check`
+
+* View the test reports: `firefox build/reports/tests/index.html`
+
 JPA Based On EclipseLink
 ------------------------
 
@@ -885,7 +918,7 @@ Example: See [102-jpa-eclipselink](102-jpa-eclipselink).
 
 * Create a JUnit test class: [PersonTest.java](102-jpa-eclipselink/src/test/java/org/uli/jpa/PersonTest.java)
 
-* Create a configuration file for your database: [persistence.xml]102-jpa-eclipselink/src/main/resources/persistence.xml)
+* Create a configuration file for your database: [persistence.xml]102-jpa-eclipselink/src/main/resources/META-INF/persistence.xml)
 
 * Compile and run junit tests: `./gradlew check`
 

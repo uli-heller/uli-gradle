@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.uli.jpa;
+package org.uli.jpahibernate;
 
 import static org.junit.Assert.*;
 

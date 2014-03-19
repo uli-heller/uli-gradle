@@ -1,4 +1,4 @@
-package org.uli.jpa;
+package org.uli.jpahibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
