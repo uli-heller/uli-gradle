@@ -129,7 +129,7 @@ Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew)
 
   ```
   otherpc$ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
   ................................................^C
   otherpc$
   ```
@@ -171,7 +171,7 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
   apply plugin: "java"
 
   task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
+    gradleVersion = '1.12'
   }
   ```
 
@@ -200,11 +200,11 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
   ................................................
   .....................................................
-  Unzipping .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10-bin.zip to .../.gradle/wrapper/dists/gradle-1.10-bin/...
-  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10/bin/gradle
+  Unzipping .../.gradle/wrapper/dists/gradle-1.12-bin/.../gradle-1.12-bin.zip to .../.gradle/wrapper/dists/gradle-1.12-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.12-bin/.../gradle-1.12/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
