@@ -33,28 +33,28 @@ Overview
 Gradle Coldstart
 ----------------
 
-* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-1.10-all.zip)
+* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-1.12-all.zip)
 
-* Unzip it to a folder of your choice, for example $HOME/opt/gradle-1.10
+* Unzip it to a folder of your choice, for example $HOME/opt/gradle-1.12
 
-* Add $HOME/opt/gradle-1.10/bin to the PATH environment variable
+* Add $HOME/opt/gradle-1.12/bin to the PATH environment variable
 
 * Execute `gradle -v` and expect an output like this
 
   ```
   ------------------------------------------------------------
-  Gradle 1.10
+  Gradle 1.12
   ------------------------------------------------------------
   
-  Build time:   2013-12-17 09:28:15 UTC
+  Build time:   2014-04-29 09:24:31 UTC
   Build number: none
-  Revision:     36ced393628875ff15575fa03d16c1349ffe8bb6
+  Revision:     a831fa866d46cbee94e61a09af15f9dd95987421
   
   Groovy:       1.8.6
-  Ant:          Apache Ant(TM) version 1.9.2 compiled on July 8 2013
+  Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
   Ivy:          2.2.0
-  JVM:          1.6.0_27 (Sun Microsystems Inc. 20.0-b12)
-  OS:           Linux 3.12.6-031206-generic amd64
+  JVM:          1.6.0_31 (Sun Microsystems Inc. 23.25-b01)
+  OS:           Linux 3.14.4-031404-generic amd64
   ```
 
 Java Quickstart
@@ -103,11 +103,11 @@ Note: You don't have to install gradle first!
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.10-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
   ................................................
   .....................................................
-  Unzipping .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10-bin.zip to .../.gradle/wrapper/dists/gradle-1.10-bin/...
-  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.10-bin/.../gradle-1.10/bin/gradle
+  Unzipping .../wrapper/dists/gradle-1.12-bin/64p.../gradle-1.12-bin.zip to .../wrapper/dists/gradle-1.12-bin/64p...
+  Set executable permissions for: .../wrapper/dists/gradle-1.12-bin/64p.../gradle-1.12/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
