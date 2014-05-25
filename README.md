@@ -811,10 +811,10 @@ Example: See [092-javamelody](092-javamelody).
         apply plugin: "war"
         
         dependencies {
-            compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
-            runtime 'net.bull.javamelody:javamelody-core:1.48.0'
+            compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.6
+            runtime 'net.bull.javamelody:javamelody-core:1.50.0'
             runtime 'org.jrobin:jrobin:1.5.9'
-            runtime 'org.slf4j:slf4j-api:1.7.5'
+            runtime 'org.slf4j:slf4j-api:1.7.7'
         }
         
         repositories {
@@ -838,13 +838,13 @@ Example: See [092-javamelody](092-javamelody).
 * Generate the war file: `./gradlew assemble`
 
 * Deploy the war file into Tomcat7: 
-  `cp build/libs/092-javamelody.war /opt/apache-tomcat-7.0.40/webapps`
+  `cp build/libs/092-javamelody.war /opt/apache-tomcat-7.0.54/webapps`
 
   Note: This assumes that your Tomcat7 installation resides in
-  /opt/apache-tomcat-7.0.40.
+  /opt/apache-tomcat-7.0.54.
 
 * Start Tomcat7:
-  `/opt/apache-tomcat-7.0.40/bin/startup.sh`
+  `/opt/apache-tomcat-7.0.54/bin/startup.sh`
 
 * Navigate your browser to [http://localhost:8080/092-javamelody/](http://localhost:8080/092-javamelody/)
 

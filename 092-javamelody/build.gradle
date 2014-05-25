@@ -2,10 +2,10 @@ apply plugin: "java"
 apply plugin: "war"
 
 dependencies {
-    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.4
-    runtime 'net.bull.javamelody:javamelody-core:1.49.0'
+    compile group: 'org.glassfish', name: 'javax.faces', version: '2.2.+' // 2.2.6
+    runtime 'net.bull.javamelody:javamelody-core:1.50.0'
     runtime 'org.jrobin:jrobin:1.5.9'
-    runtime 'org.slf4j:slf4j-api:1.7.5'
+    runtime 'org.slf4j:slf4j-api:1.7.7'
 }
 
 repositories {
