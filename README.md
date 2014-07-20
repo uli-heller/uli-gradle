@@ -22,6 +22,7 @@ Overview
 * [Creating Eclipse Projects](#creating-eclipse-projects)
 * [Logging Based On SLF4J/LOG4J](#logging-based-on-slf4j-log4j)
 * [Logging Based On SLF4J/LOGBACK](#logging-based-on-slf4j-logback)
+* [Logging Based On SLF4J/LOG4J-2.0](#logging-based-on-slf4j-log4j-2.0)
 * [Developing a Web Application](#developing-a-web-application)
 * [Developing a JSF Web Application](#developing-a-jsf-web-application)
 * [Debugging a JSF Web Application](#debugging-a-jsf-web-application)
@@ -586,6 +587,34 @@ This is pretty similar to "Logging Based On SLF4J/LOG4J"!
     * src/test/resources/logback-test.xml
 
 * Do a build and execute junit tests: `gradle check`
+
+Logging Based On SLF4J/LOG4J-2.0
+--------------------------------
+
+Example: See [074-slf4j-log4-2.0j](074-slf4j-log4j-2.0)
+
+* Start with an ordinary gradle project
+
+    * build.gradle ... a build script for a java project
+
+    * src/main/java ... java sources
+
+    * src/test/java ... junit tests
+
+* Add dependency to SLF4J and LOG4J-2.0 to the build script
+
+* Add loggers to your source code
+
+* Do a build and execute junit tests: `gradle check`
+
+* Create a log4j config file for test: src/test/resources/log4j2-test.xml
+
+* Do a build and execute junit tests again: `gradle check`
+
+* Verify: No more warnings within test reports, a log file has been created!
+
+* Note: For running the application instead of the junit tests, create
+  a log4j2 config file for production: src/main/resources/log4j2.xml
 
 Developing a Web Application
 ----------------------------
