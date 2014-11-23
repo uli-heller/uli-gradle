@@ -29,6 +29,8 @@ Overview
 * [A JSF Web Application With JavaMelody Monitoring](#web-application-monitoring-with-javamelody)
 * [JPA Based On Hibernate](#jpa-based-on-hibernate)
 * [JPA Based On EclipseLink](#jpa-based-on-eclipselink)
+* [Springboot](#springboot)
+* [Markdown](#markdown)
 * [Groovy Quickstart](#groovy-quickstart)
 
 Gradle Coldstart
@@ -952,6 +954,38 @@ Example: See [102-jpa-eclipselink](102-jpa-eclipselink).
 * Compile and run junit tests: `./gradlew check`
 
 * View the test reports: `firefox build/reports/tests/index.html`
+
+Springboot
+----------
+
+TBD
+
+Markdown
+--------
+
+Example: See [120-markdown](120-markdown).
+
+* Create an empty folder
+
+* `gradle init`
+
+* Edit [build.gradle](120-markdown/build.gradle)
+
+    * Repositories for buildscript:
+
+        * `mavenCentral()`
+
+        * `maven { url 'http://dl.bintray.com/content/aalmiray/kordamp' }`
+
+    * Classpath for buildscript: `classpath 'org.kordamp:markdown-gradle-plugin:0.1.1'`
+
+    * Plugin: `apply plugin: 'org.kordamp.gradle.markdown'`
+
+* Add a sample markdown file [src/markdown/sample.md](120-markdown/src/markdown/sample.md)
+
+* Create the html file: `./gradlew markdownToHtml`
+
+* View the html file: `firefox build/gen-html/sample.html`
 
 Groovy Quickstart
 -----------------
