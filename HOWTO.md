@@ -11,7 +11,7 @@ For example from 1.12 to 2.2.1. Attention: This doesn't work when other dependen
 * Find all usage of this version number:
     * `find . -type f|xargs grep -l "1.12"` ... gets a list of files
     * `find . -type f|xargs grep "1.12"` ... gets the lines containing the version
-* Search and replace: `find . -type f|xargs grep -l "1.12"|xargs -n1 sed -i "s/1.12/2.2.1/"`
+* Search and replace: `find . -type f|grep "gradle-wrapper.properties\|-wrapper/build.gradle"|xargs grep -l "1.12"|xargs -n1 sed -i "s/1.12/2.2.1/"`
 * Cleanup again: `for i in */gradlew; do (cd $(dirname $i); ./gradlew clean); done`
 * Build all jars: `for i in */gradlew; do (cd $(dirname $i); ./gradlew jar); done`
 * Commit: `git commit -m "Upgraded gradle: 1.12 -> 2.2.1" .`
