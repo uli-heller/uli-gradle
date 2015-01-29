@@ -36,17 +36,17 @@ Overview
 Gradle Coldstart
 ----------------
 
-* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-1.12-all.zip)
+* Download the [gradle.zip](http://downloads.gradle.org/distributions/gradle-2.2.1-all.zip)
 
-* Unzip it to a folder of your choice, for example $HOME/opt/gradle-1.12
+* Unzip it to a folder of your choice, for example $HOME/opt/gradle-2.2.1
 
-* Add $HOME/opt/gradle-1.12/bin to the PATH environment variable
+* Add $HOME/opt/gradle-2.2.1/bin to the PATH environment variable
 
 * Execute `gradle -v` and expect an output like this
 
   ```
   ------------------------------------------------------------
-  Gradle 1.12
+  Gradle 2.2.1
   ------------------------------------------------------------
   
   Build time:   2014-04-29 09:24:31 UTC
@@ -106,11 +106,11 @@ Note: You don't have to install gradle first!
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-2.2.1-bin.zip
   ................................................
   .....................................................
-  Unzipping .../wrapper/dists/gradle-1.12-bin/64p.../gradle-1.12-bin.zip to .../wrapper/dists/gradle-1.12-bin/64p...
-  Set executable permissions for: .../wrapper/dists/gradle-1.12-bin/64p.../gradle-1.12/bin/gradle
+  Unzipping .../wrapper/dists/gradle-2.2.1-bin/64p.../gradle-1.12-bin.zip to .../wrapper/dists/gradle-1.12-bin/64p...
+  Set executable permissions for: .../wrapper/dists/gradle-2.2.1-bin/64p.../gradle-1.12/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
@@ -132,7 +132,7 @@ Example: See [020-java-quickstart-gradlew](020-java-quickstart-gradlew)
 
   ```
   otherpc$ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-2.2.1-bin.zip
   ................................................^C
   otherpc$
   ```
@@ -174,7 +174,7 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
   apply plugin: "java"
 
   task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.2.1'
   }
   ```
 
@@ -203,11 +203,11 @@ Within this chapter, we describe how to bootstrap the gradle wrapper.
 
   ```
   $ ./gradlew jar
-  Downloading http://services.gradle.org/distributions/gradle-1.12-bin.zip
+  Downloading http://services.gradle.org/distributions/gradle-2.2.1-bin.zip
   ................................................
   .....................................................
-  Unzipping .../.gradle/wrapper/dists/gradle-1.12-bin/.../gradle-1.12-bin.zip to .../.gradle/wrapper/dists/gradle-1.12-bin/...
-  Set executable permissions for: .../.gradle/wrapper/dists/gradle-1.12-bin/.../gradle-1.12/bin/gradle
+  Unzipping .../.gradle/wrapper/dists/gradle-2.2.1-bin/.../gradle-1.12-bin.zip to .../.gradle/wrapper/dists/gradle-1.12-bin/...
+  Set executable permissions for: .../.gradle/wrapper/dists/gradle-2.2.1-bin/.../gradle-1.12/bin/gradle
   :compileJava
   :processResources UP-TO-DATE
   :classes
