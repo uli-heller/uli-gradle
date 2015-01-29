@@ -10,3 +10,4 @@ buildscript {
 }
 
 apply plugin: 'org.kordamp.gradle.markdown'
+apply plugin: 'java' // for clean
