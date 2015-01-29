@@ -49,15 +49,14 @@ Gradle Coldstart
   Gradle 2.2.1
   ------------------------------------------------------------
   
-  Build time:   2014-04-29 09:24:31 UTC
+  Build time:   2014-11-24 09:45:35 UTC
   Build number: none
-  Revision:     a831fa866d46cbee94e61a09af15f9dd95987421
+  Revision:     6fcb59c06f43a4e6b1bcb401f7686a8601a1fb4a
   
-  Groovy:       1.8.6
+  Groovy:       2.3.6
   Ant:          Apache Ant(TM) version 1.9.3 compiled on December 23 2013
-  Ivy:          2.2.0
-  JVM:          1.6.0_31 (Sun Microsystems Inc. 23.25-b01)
-  OS:           Linux 3.14.4-031404-generic amd64
+  JVM:          1.7.0_71 (Oracle Corporation 24.71-b01)
+  OS:           Linux 3.18.4-031804-lowlatency amd64
   ```
 
 Java Quickstart
