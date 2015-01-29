@@ -1,3 +1,5 @@
+// Currently not used at all
+
 String commonsLang3Version='3.1';
 String commonsCliVersion='1.2';
 String derbyVersion = '10.10.1.1';
