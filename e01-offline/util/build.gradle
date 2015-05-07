@@ -1,0 +1,16 @@
+apply plugin: "java"
+
+dependencies {
+  compile project(":a")
+}
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    from {
+      configurations.runtime.collect { it
+      }
+    }
+}
