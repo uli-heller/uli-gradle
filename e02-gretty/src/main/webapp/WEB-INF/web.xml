@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    id="WebApp_ID" version="3.0">
+  <display-name>E02-GRETTY</display-name>
+
+  <servlet>
+    <servlet-name>E02GrettyServlet</servlet-name>
+    <servlet-class>org.uli.e02gretty.E02GrettyServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- Servlet Mapping to URL pattern -->
+  <servlet-mapping>
+    <servlet-name>E02GrettyServlet</servlet-name>
+    <url-pattern>/do/*</url-pattern>
+  </servlet-mapping>
+
+  <!-- Welcome page list -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

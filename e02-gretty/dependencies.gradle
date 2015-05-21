@@ -1,0 +1,31 @@
+ext.javaxServletApiVersion='3.0.1';
+ext.junitVersion = '4.12';
+ext.log4j12Version='1.2.17';
+ext.lombokVersion='1.16.4';
+ext.slf4jVersion='1.7.12';
+
+// Originally, we defined the artifact like this:
+//     ext.springOrm="org.springframework:spring-orm:${springVersion}";
+// Within the "build.gradle" files, you'd refer to them like this:
+//     compile springOrm
+// The drawback of this approach is the fact that it isn't easy to override the
+// version of the artifact.
+//
+// To overcome this limitation, we define the artifact like this:
+//     ext.springOrm={ it -> return "org.springframework:spring-orm:${it?:springVersion}"; }
+// Within the "build.gradle" files, you'll refer to them like this:
+//     compile springOrm()
+// or
+//     compile springOrm("3.2.13.RELEASE")
+// or
+//     springVersion="3.2.13.RELEASE"
+//     compile springOrm()
+ext.javaxServletApi={ it -> return "javax.servlet:javax.servlet-api:${it?:javaxServletApiVersion}"; }
+ext.junit={ it -> return "junit:junit:${it?:junitVersion}"; } // U
+ext.log4j12={ it -> return "log4j:log4j:${it?:log4j12Version}"; } // U
+ext.log4jApi={ it -> return "org.apache.logging.log4j:log4j-api:${it?:log4jVersion}"; }
+ext.log4jCore={ it -> return "org.apache.logging.log4j:log4j-core:${it?:log4jVersion}"; }
+ext.log4jSlf4jImpl={ it -> return "org.apache.logging.log4j:log4j-slf4j-impl:${it?:log4jVersion}"; }
+ext.lombok={ it -> return "org.projectlombok:lombok:${it?:lombokVersion}"; }
+ext.slf4jApi={ it -> return "org.slf4j:slf4j-api:${it?:slf4jVersion}"; }
+ext.slf4jLog4j12={ it -> return "org.slf4j:slf4j-log4j12:${it?:slf4jVersion}"; }

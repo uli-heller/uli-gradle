@@ -1,0 +1,42 @@
+apply plugin: "java"
+apply plugin: "groovy"
+apply plugin: "war"
+apply plugin: "eclipse"
+//apply plugin: "application"
+//apply plugin: "eclipse-wtp"
+apply from: 'gretty.plugin'
+apply from: 'dependencies.gradle'
+
+// required for gretty 1.1.9, 1.2.0, 1.2.1, 1.2.2
+// in order to use log4j logging within
+// the webapp
+// https://github.com/akhikhl/gretty/issues/145
+configurations {
+  grettyRunnerTomcat7 {
+    exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
+  }
+}
+
+gretty {
+  // supported values:
+  // 'jetty7', 'jetty8', 'jetty9', 'tomcat7', 'tomcat8'
+  servletContainer = 'tomcat7'
+  logbackConfigFile = 'src/test/resources/gretty-logback.xml'
+}
+
+dependencies {
+  providedCompile javaxServletApi()
+  compile lombok()
+  compile slf4jApi()
+  compile slf4jLog4j12()
+  compile log4j12()
+}
+
+repositories {
+    mavenCentral()
+}
+
+clean.doLast {
+  ant.delete(file: 'e02-gretty.log');
+  ant.delete(file: 'e02-gretty-gretty.log');
+}
