@@ -7,13 +7,17 @@ apply plugin: "eclipse"
 apply from: 'gretty.plugin'
 apply from: 'dependencies.gradle'
 
-// required for gretty 1.1.9, 1.2.0, 1.2.1, 1.2.2
+boolean excludeSlf4j = true;
+
+// required for gretty 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3
 // in order to use log4j logging within
 // the webapp
 // https://github.com/akhikhl/gretty/issues/145
-configurations {
-  grettyRunnerTomcat7 {
-    exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
+if (excludeSlf4j) {
+  configurations {
+    grettyRunnerTomcat7 {
+      exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
+    }
   }
 }
 

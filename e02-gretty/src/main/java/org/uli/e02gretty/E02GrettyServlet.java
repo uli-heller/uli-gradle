@@ -28,7 +28,7 @@ public class E02GrettyServlet extends HttpServlet implements ServletContextListe
         PrintWriter out = response.getWriter();
         logAll();
         if (pathInfo == null) {
-            send(out, "Was soll das?");
+            send(out, "No PathInfo");
         } else {
             if (pathInfo.startsWith("/list")) {
                 StringBuilder sb = new StringBuilder();
@@ -41,10 +41,14 @@ public class E02GrettyServlet extends HttpServlet implements ServletContextListe
                     sb.append("\r\n");
                 }
                 log.debug(".: LIST");
-                send(out, "Gestartet - pathInfo=" + pathInfo + "\r\n\r\n" + sb.toString());
-            } else if (pathInfo.startsWith("/stop")) {
-                log.debug(".: STOP");
-                send(out, "Gestoppt - pathInfo=" + pathInfo);
+		String loggers = sb.toString();
+                if (loggers.length() == 0) {
+                    loggers = "No loggers";
+                }
+                send(out, "PathInfo=" + pathInfo + "\r\n\r\n" + loggers);
+            } else {
+                log.debug(".: INVALID");
+                send(out, "Invalid PathInfo=" + pathInfo);
             }
         }
         log.debug("<-");
