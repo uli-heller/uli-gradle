@@ -6,5 +6,5 @@
 */.settings
 99x-*/lib
 derbyDb
-derby.log
+*.log
 build
