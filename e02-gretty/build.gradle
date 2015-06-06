@@ -9,11 +9,11 @@ apply from: 'dependencies.gradle'
 
 // issue 145 - https://github.com/akhikhl/gretty/issues/145
 // Logging only works when slf4j is excluded. We set this to false
-// in order to reproduce the issue. Up until gretty 1.2.3, the
+// in order to reproduce the issue. Up until gretty 1.2.4, the
 // issue is known to exist
 boolean excludeSlf4j = false;
 
-// required for gretty 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3
+// required for gretty 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 1.2.4
 // in order to use log4j logging within
 // the webapp
 // https://github.com/akhikhl/gretty/issues/145
