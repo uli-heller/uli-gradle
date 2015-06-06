@@ -38,7 +38,7 @@ within your browser.
 The expected display looks like this:
 
 ```
-athInfo=/list
+pathInfo=/list
 
 org.uli.e02gretty.E02GrettyServlet	DEBUG
 ```
