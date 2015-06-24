@@ -1,5 +1,6 @@
 defaultTasks 'dist'
 
 task wrapper(type: Wrapper) {
+  //gradleVersion = "2.4" // KO, a warning shows up on 'gradlew --offline jar'
   gradleVersion = "2.5-rc-1"
 }
