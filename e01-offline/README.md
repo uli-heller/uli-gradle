@@ -10,4 +10,4 @@ The project doesn't contain anything useful aside from showing the error,
 even the build files aren't useful.
 
 * 2.4 ... warning is printed
-* 2.5-rc-1 ... no warning
+* 2.5 ... no warning
