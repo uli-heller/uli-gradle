@@ -1,3 +1,12 @@
+In A Nutshell
+=============
+
+1. Create the project as usual: `gradle war`
+2. Populate local cache: `gradle syncRemoteRepositories`
+3. Examine local folder syncRepo: `find syncRepo`
+4. Clean all gradle caches: `rm -rf .gradle ~/.gradle`
+5. Build without network access: `gradle --offline war`
+
 Beispiel für ein lokales Repository mit Projekt-Abhängigkeiten
 ==============================================================
 
