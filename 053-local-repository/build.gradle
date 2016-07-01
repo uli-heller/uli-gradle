@@ -1,19 +1,17 @@
 buildscript {
-  if(System.getenv('RESTRICTED')) {
-    repositories {
-      ivy {
-        url "file://${project.projectDir}/syncRepo"
-      }
+  repositories {
+    ivy {
+      url "file://${project.projectDir}/syncRepo"
     }
   }
   dependencies {
     classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+    classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+    classpath "org.ysb33r.gradle:ivypot:0.4"
   }
 }
-plugins {
-  id 'org.ysb33r.ivypot' version '0.4'
-}
 
+apply plugin: 'org.ysb33r.ivypot'
 apply plugin: "java"
 apply plugin: "war"
 apply plugin: "spring-boot"
