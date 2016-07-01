@@ -1,7 +1,7 @@
 In A Nutshell
 =============
 
-1. Create the project as usual: `gradle war`
+1. Build the project as usual: `gradle war`
 2. Populate local cache: `gradle syncRemoteRepositories`
 3. Examine local folder syncRepo: `find syncRepo`
 4. Clean all gradle caches: `rm -rf .gradle ~/.gradle`
