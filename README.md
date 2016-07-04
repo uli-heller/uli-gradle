@@ -446,6 +446,34 @@ There is a gradle plugin which helps you doing this.
 * Delete the generated file (after looking at it):
   `rm -f data/test-data.out`
 
+Copy Dependencies Into A Local Ivy Repository
+---------------------------------------------
+
+Example: See [053-local-repository(053-local-repository).
+
+
+You'd like to have a local ivy repository containing all your
+dependencies. This enables you to build the project without
+any connection to the internet.
+
+There is a gradle plugin which helps you doing this.
+
+* Starting point: A project with external dependencies, for example
+  a copy of [110-springboot](110-springboot).
+
+* Modify the file [build.gradle](053-local-repository): Add
+  the ivypot plugin and the task syncRemoteRepositories
+
+* Run the build: `./gradlew syncRemoteRepositories`
+  (ths typically takes a lot of time)
+
+* Commit the ivy repo:
+    * `git add syncRepo`
+    * `git commit ...`
+
+* Delete the generated file (after looking at it):
+  `rm -f data/test-data.out`
+
 Adding JUnit Tests
 ------------------
 
